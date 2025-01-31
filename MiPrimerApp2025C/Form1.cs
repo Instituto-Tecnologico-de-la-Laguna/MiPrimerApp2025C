@@ -9,7 +9,7 @@ namespace MiPrimerApp2025C
 
         private void btnEnviar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(txtNombre.Text);
+            MessageBox.Show("Mi nombre es: P23130614 "+txtNombre.Text);
         }
     }
 }
