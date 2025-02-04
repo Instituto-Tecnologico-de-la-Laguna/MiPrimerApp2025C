@@ -1,6 +1,6 @@
 ﻿namespace MiPrimerApp2025C
 {
-    partial class Form1
+    partial class trabajo1
     {
         /// <summary>
         ///  Required designer variable.
@@ -35,39 +35,43 @@
             // 
             // txtNombre
             // 
-            txtNombre.Location = new Point(28, 41);
+            txtNombre.Location = new Point(22, 33);
+            txtNombre.Margin = new Padding(2, 2, 2, 2);
             txtNombre.Name = "txtNombre";
-            txtNombre.Size = new Size(358, 31);
+            txtNombre.Size = new Size(287, 27);
             txtNombre.TabIndex = 0;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(28, 13);
+            label1.Location = new Point(22, 10);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(78, 25);
+            label1.Size = new Size(64, 20);
             label1.TabIndex = 1;
             label1.Text = "Nombre";
             // 
             // btnEnviar
             // 
-            btnEnviar.Location = new Point(412, 41);
+            btnEnviar.Location = new Point(330, 33);
+            btnEnviar.Margin = new Padding(2, 2, 2, 2);
             btnEnviar.Name = "btnEnviar";
-            btnEnviar.Size = new Size(112, 34);
+            btnEnviar.Size = new Size(90, 27);
             btnEnviar.TabIndex = 2;
             btnEnviar.Text = "Enviar";
             btnEnviar.UseVisualStyleBackColor = true;
             btnEnviar.Click += btnEnviar_Click;
             // 
-            // Form1
+            // trabajo1
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(547, 98);
+            ClientSize = new Size(438, 78);
             Controls.Add(btnEnviar);
             Controls.Add(label1);
             Controls.Add(txtNombre);
-            Name = "Form1";
+            Margin = new Padding(2, 2, 2, 2);
+            Name = "trabajo1";
             Text = "Mi Primer Aplicacion 2025";
             ResumeLayout(false);
             PerformLayout();
