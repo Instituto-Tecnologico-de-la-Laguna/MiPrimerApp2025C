@@ -6,10 +6,10 @@ namespace MiPrimerApp2025C
         {
             InitializeComponent();
         }
-
+        
         private void btnEnviar_Click(object sender, EventArgs e)
         {
-            MessageBox.Show(txtNombre.Text);
+            MessageBox.Show("El nombre es: "+txtNombre.Text);
         }
     }
 }
