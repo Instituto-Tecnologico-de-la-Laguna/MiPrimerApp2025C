@@ -33,6 +33,13 @@
             txtValor2 = new TextBox();
             label2 = new Label();
             btnCalcular = new Button();
+            groupBox1 = new GroupBox();
+            rdbDivi = new RadioButton();
+            rdbMulti = new RadioButton();
+            rdbResta = new RadioButton();
+            rdbSuma = new RadioButton();
+            butBorrar = new Button();
+            groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -69,7 +76,7 @@
             // 
             // btnCalcular
             // 
-            btnCalcular.Location = new Point(342, 90);
+            btnCalcular.Location = new Point(328, 48);
             btnCalcular.Name = "btnCalcular";
             btnCalcular.Size = new Size(112, 34);
             btnCalcular.TabIndex = 4;
@@ -77,11 +84,81 @@
             btnCalcular.UseVisualStyleBackColor = true;
             btnCalcular.Click += btnCalcular_Click;
             // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(rdbDivi);
+            groupBox1.Controls.Add(rdbMulti);
+            groupBox1.Controls.Add(rdbResta);
+            groupBox1.Controls.Add(rdbSuma);
+            groupBox1.Location = new Point(103, 208);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(388, 150);
+            groupBox1.TabIndex = 5;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "OPERACION";
+            // 
+            // rdbDivi
+            // 
+            rdbDivi.AutoSize = true;
+            rdbDivi.Location = new Point(181, 95);
+            rdbDivi.Name = "rdbDivi";
+            rdbDivi.Size = new Size(113, 29);
+            rdbDivi.TabIndex = 3;
+            rdbDivi.TabStop = true;
+            rdbDivi.Text = "DIVISION";
+            rdbDivi.UseVisualStyleBackColor = true;
+            // 
+            // rdbMulti
+            // 
+            rdbMulti.AutoSize = true;
+            rdbMulti.Location = new Point(181, 45);
+            rdbMulti.Name = "rdbMulti";
+            rdbMulti.Size = new Size(175, 29);
+            rdbMulti.TabIndex = 2;
+            rdbMulti.TabStop = true;
+            rdbMulti.Text = "MULTIPLICACION";
+            rdbMulti.UseVisualStyleBackColor = true;
+            rdbMulti.CheckedChanged += radioButton1_CheckedChanged;
+            // 
+            // rdbResta
+            // 
+            rdbResta.AutoSize = true;
+            rdbResta.Location = new Point(29, 93);
+            rdbResta.Name = "rdbResta";
+            rdbResta.Size = new Size(87, 29);
+            rdbResta.TabIndex = 1;
+            rdbResta.TabStop = true;
+            rdbResta.Text = "RESTA";
+            rdbResta.UseVisualStyleBackColor = true;
+            // 
+            // rdbSuma
+            // 
+            rdbSuma.AutoSize = true;
+            rdbSuma.Location = new Point(29, 45);
+            rdbSuma.Name = "rdbSuma";
+            rdbSuma.Size = new Size(87, 29);
+            rdbSuma.TabIndex = 0;
+            rdbSuma.TabStop = true;
+            rdbSuma.Text = "SUMA";
+            rdbSuma.UseVisualStyleBackColor = true;
+            // 
+            // butBorrar
+            // 
+            butBorrar.Location = new Point(328, 127);
+            butBorrar.Name = "butBorrar";
+            butBorrar.Size = new Size(112, 34);
+            butBorrar.TabIndex = 6;
+            butBorrar.Text = "Borrar";
+            butBorrar.UseVisualStyleBackColor = true;
+            butBorrar.Click += butBorrar_Click;
+            // 
             // frmOperacion2Numeros
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(512, 209);
+            ClientSize = new Size(677, 390);
+            Controls.Add(butBorrar);
+            Controls.Add(groupBox1);
             Controls.Add(btnCalcular);
             Controls.Add(txtValor2);
             Controls.Add(label2);
@@ -89,6 +166,8 @@
             Controls.Add(label1);
             Name = "frmOperacion2Numeros";
             Text = "Operaciones 2 Numeros";
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -100,5 +179,11 @@
         private TextBox txtValor2;
         private Label label2;
         private Button btnCalcular;
+        private GroupBox groupBox1;
+        private RadioButton rdbDivi;
+        private RadioButton rdbMulti;
+        private RadioButton rdbResta;
+        private RadioButton rdbSuma;
+        private Button butBorrar;
     }
 }
