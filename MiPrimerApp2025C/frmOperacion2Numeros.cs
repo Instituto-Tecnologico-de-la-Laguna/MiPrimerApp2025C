@@ -17,23 +17,52 @@ namespace MiPrimerApp2025C
             InitializeComponent();
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void frmOperacion2Numeros_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void btnCalcular_Click(object sender, EventArgs e)
         {
-            Double Valor1, Valor2;
-            Valor1 = Convert.ToDouble(txtValor1.Text);
-            Valor2 = Double.Parse(txtValor2.Text);
-            MessageBox.Show("La suma de los valores es: " + (Valor1 + Valor2));
-            
+            Double valor1, valor2;
+
+            try
+            {
+                valor1 = Convert.ToDouble(txtValor1.Text);
+                valor2 = double.Parse(txtValor2.Text);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Los valores ingresados no son correctos");
+                return;
+            }
+
+            valor1 = Convert.ToDouble(txtValor1.Text);
+            valor2 = double.Parse(txtValor2.Text);
+
+            if (rdbSuma.Checked == true)
+            {
+                MessageBox.Show("La suma de los valores es: " + (valor1 + valor2));
+            }
+            else if (rdbresta.Checked == true)
+            {
+                MessageBox.Show("La resta de los valores es: " + (valor1 - valor2));
+            }
+            else if (rdbMultiplicacion.Checked == true)
+            {
+                MessageBox.Show("La Multiplicacion de los valores es: " + (valor1 * valor2));
+            }
+            else if (rdbDivision.Checked == true)
+            {
+                MessageBox.Show("La Division de los valores es: " + (valor1 / valor2));
+            }
+            else
+            {
+                MessageBox.Show("No se ha seleccionado ninguna operacion");
+            }
+        }
+
+        private void btnborrar_Click(object sender, EventArgs e)
+        {
+            txtValor1.Clear();
+            txtValor2.Clear();
         }
     }
 }
+
+    
