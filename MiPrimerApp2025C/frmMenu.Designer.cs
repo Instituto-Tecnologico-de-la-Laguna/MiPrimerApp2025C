@@ -62,7 +62,7 @@
             // aplicacionSimpleToolStripMenuItem
             // 
             aplicacionSimpleToolStripMenuItem.Name = "aplicacionSimpleToolStripMenuItem";
-            aplicacionSimpleToolStripMenuItem.Size = new Size(224, 26);
+            aplicacionSimpleToolStripMenuItem.Size = new Size(267, 26);
             aplicacionSimpleToolStripMenuItem.Text = "Aplicacion Simple";
             aplicacionSimpleToolStripMenuItem.Click += aplicacionSimpleToolStripMenuItem_Click;
             // 
@@ -77,7 +77,8 @@
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            BackColor = SystemColors.AppWorkspace;
+            ClientSize = new Size(800, 169);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
             Name = "frmMenu";

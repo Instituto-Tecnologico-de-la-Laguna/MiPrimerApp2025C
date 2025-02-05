@@ -25,11 +25,32 @@ namespace MiPrimerApp2025C
         private void btnCalcular_Click(object sender, EventArgs e)
         {
             Double val1, val2;
-            //val1 = Convert.ToDouble(btnCalcular.Text);
-            val1 = double.Parse(textValor1.Text);
-            val2 = double.Parse(textValor2.Text);
-            //val2 = Convert.ToDouble(btnCalcular.Text);
-            MessageBox.Show("La suma es : " + (val1 + val2).ToString());
+            try
+            {
+                //val1 = Convert.ToDouble(btnCalcular.Text);
+                val1 = double.Parse(textValor1.Text);
+                val2 = double.Parse(textValor2.Text);
+                //val2 = Convert.ToDouble(btnCalcular.Text);
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Ingrese valores numericos");
+                return;
+            }
+            if (rdbsuma.Checked == true)
+                MessageBox.Show("La suma es : " + (val1 + val2).ToString());
+            else if (rdbresta.Checked == true)
+                MessageBox.Show("La resta es : " + (val1 - val2).ToString());
+            else if (rdbmultiplicacion.Checked == true)
+                MessageBox.Show("La multiplicacion es : " + (val1 * val2).ToString());
+            else
+                MessageBox.Show("La division es : " + (val1 / val2).ToString());
+        }
+
+        private void butborrar_Click(object sender, EventArgs e)
+        {
+            textValor1.Clear();
+            textValor2.Clear();
         }
     }
 }
