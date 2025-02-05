@@ -19,7 +19,7 @@ namespace MiPrimerApp2025C
 
         private void archivoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();
+            
 
 
         }
