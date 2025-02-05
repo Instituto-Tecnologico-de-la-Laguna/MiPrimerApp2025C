@@ -25,10 +25,40 @@ namespace MiPrimerApp2025C
         private void btnCalcular_Click(object sender, EventArgs e)
         {
             Double v1, v2;
-            v1 = Convert.ToDouble(txtValor1.Text);
-            v2 = double.Parse(txtBox2.Text);
 
-            MessageBox.Show("Resultado: " + (v1 + v2));
+            try
+            {
+                v1 = Convert.ToDouble(txtValor1.Text);
+                v2 = double.Parse(txtBox2.Text);
+            }
+            catch (Exception) {
+                MessageBox.Show("Ingrese valores numericos");
+                return;
+            }
+
+
+            if (rdBSum.Checked == true)
+            {
+                MessageBox.Show("Resultado: " + (v1 + v2));
+            }
+            else if (rdBRes.Checked == true)
+            {
+                MessageBox.Show("Resultado: " + (v1 - v2));
+            }
+            else if (rdBMul.Checked == true)
+            {
+                MessageBox.Show("Resultado: " + (v1 * v2));
+            }
+            else if (rdBDiv.Checked == true)
+            {
+                MessageBox.Show("Resultado: " + (v1 / v2));
+            }
+        }
+
+        private void btnBorrar_Click(object sender, EventArgs e)
+        {
+            txtValor1.Clear();
+            txtBox2.Clear();
         }
     }
 }
