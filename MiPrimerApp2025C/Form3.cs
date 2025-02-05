@@ -24,12 +24,43 @@ namespace MiPrimerApp2025C
 
         private void button1_Click(object sender, EventArgs e)
         {
-            double v1 = double.Parse(VALOR1.Text);
-            double v2 = double.Parse(VALOR2.Text);
+            try
+            {
+                double v1 = double.Parse(VALOR1.Text);
+                double v2 = double.Parse(VALOR2.Text);
+                double x = 0;
 
-            double sum = v1+ v2;
+                if (SUMA.Checked == true)
+                {
+                    x = v1 + v2;
+                }
+                else if (RESTA.Checked == true)
+                {
+                    x = v1 - v2;
+                }
+                else if (MULT.Checked == true)
+                {
+                    x = v1 * v2;
+                }
+                else if (DIV.Checked == true)
+                {
+                    x = v1 / v2;
+                }
 
-            MessageBox.Show("El resultado es: "+sum);
+
+                MessageBox.Show("El resultado es: " + x);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Ingrese valores numericos!!!");
+            }
+            
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            VALOR1.Clear();
+            VALOR2.Clear();
         }
     }
 }

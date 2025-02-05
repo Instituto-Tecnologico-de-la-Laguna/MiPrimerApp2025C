@@ -33,6 +33,13 @@
             VALOR2 = new TextBox();
             label2 = new Label();
             button1 = new Button();
+            groupBox1 = new GroupBox();
+            MULT = new RadioButton();
+            DIV = new RadioButton();
+            RESTA = new RadioButton();
+            SUMA = new RadioButton();
+            button2 = new Button();
+            groupBox1.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -78,11 +85,80 @@
             button1.UseVisualStyleBackColor = true;
             button1.Click += button1_Click;
             // 
+            // groupBox1
+            // 
+            groupBox1.Controls.Add(MULT);
+            groupBox1.Controls.Add(DIV);
+            groupBox1.Controls.Add(RESTA);
+            groupBox1.Controls.Add(SUMA);
+            groupBox1.Location = new Point(17, 74);
+            groupBox1.Name = "groupBox1";
+            groupBox1.Size = new Size(456, 196);
+            groupBox1.TabIndex = 5;
+            groupBox1.TabStop = false;
+            groupBox1.Text = "OPERACIONES";
+            // 
+            // MULT
+            // 
+            MULT.AutoSize = true;
+            MULT.Location = new Point(148, 26);
+            MULT.Name = "MULT";
+            MULT.Size = new Size(124, 24);
+            MULT.TabIndex = 3;
+            MULT.TabStop = true;
+            MULT.Text = "multiplicacion";
+            MULT.UseVisualStyleBackColor = true;
+            // 
+            // DIV
+            // 
+            DIV.AutoSize = true;
+            DIV.Location = new Point(278, 26);
+            DIV.Name = "DIV";
+            DIV.Size = new Size(81, 24);
+            DIV.TabIndex = 2;
+            DIV.TabStop = true;
+            DIV.Text = "division";
+            DIV.UseVisualStyleBackColor = true;
+            // 
+            // RESTA
+            // 
+            RESTA.AutoSize = true;
+            RESTA.Location = new Point(77, 26);
+            RESTA.Name = "RESTA";
+            RESTA.Size = new Size(62, 24);
+            RESTA.TabIndex = 1;
+            RESTA.TabStop = true;
+            RESTA.Text = "resta";
+            RESTA.UseVisualStyleBackColor = true;
+            // 
+            // SUMA
+            // 
+            SUMA.AutoSize = true;
+            SUMA.Location = new Point(6, 26);
+            SUMA.Name = "SUMA";
+            SUMA.Size = new Size(65, 24);
+            SUMA.TabIndex = 0;
+            SUMA.TabStop = true;
+            SUMA.Text = "suma";
+            SUMA.UseVisualStyleBackColor = true;
+            // 
+            // button2
+            // 
+            button2.Location = new Point(479, 241);
+            button2.Name = "button2";
+            button2.Size = new Size(94, 29);
+            button2.TabIndex = 6;
+            button2.Text = "BORRAR";
+            button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
+            // 
             // Form3
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(532, 199);
+            ClientSize = new Size(650, 310);
+            Controls.Add(button2);
+            Controls.Add(groupBox1);
             Controls.Add(button1);
             Controls.Add(VALOR2);
             Controls.Add(label2);
@@ -90,6 +166,8 @@
             Controls.Add(label1);
             Name = "Form3";
             Text = "Form3";
+            groupBox1.ResumeLayout(false);
+            groupBox1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -101,5 +179,11 @@
         private TextBox VALOR2;
         private Label label2;
         private Button button1;
+        private GroupBox groupBox1;
+        private RadioButton MULT;
+        private RadioButton DIV;
+        private RadioButton RESTA;
+        private RadioButton SUMA;
+        private Button button2;
     }
 }
