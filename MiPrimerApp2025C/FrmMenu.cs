@@ -43,5 +43,11 @@ namespace MiPrimerApp2025C
             FrmOperacionDosNumeros AppSumaNumeros = new FrmOperacionDosNumeros();
             AppSumaNumeros.Show();
         }
+
+        private void temporizadorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTemporizador AppTemporizador = new frmTemporizador();
+            AppTemporizador.Show();
+        }
     }
 }
