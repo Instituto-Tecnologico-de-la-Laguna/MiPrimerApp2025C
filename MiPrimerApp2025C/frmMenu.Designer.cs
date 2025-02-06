@@ -34,6 +34,7 @@
             aplicacionesToolStripMenuItem = new ToolStripMenuItem();
             aplicacionSToolStripMenuItem = new ToolStripMenuItem();
             operacionesToolStripMenuItem = new ToolStripMenuItem();
+            relojToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -63,7 +64,7 @@
             // 
             // aplicacionesToolStripMenuItem
             // 
-            aplicacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { aplicacionSToolStripMenuItem, operacionesToolStripMenuItem });
+            aplicacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { aplicacionSToolStripMenuItem, operacionesToolStripMenuItem, relojToolStripMenuItem });
             aplicacionesToolStripMenuItem.Name = "aplicacionesToolStripMenuItem";
             aplicacionesToolStripMenuItem.Size = new Size(126, 29);
             aplicacionesToolStripMenuItem.Text = "Aplicaciones";
@@ -81,6 +82,13 @@
             operacionesToolStripMenuItem.Size = new Size(270, 34);
             operacionesToolStripMenuItem.Text = "Operaciones";
             operacionesToolStripMenuItem.Click += operacionesToolStripMenuItem_Click_1;
+            // 
+            // relojToolStripMenuItem
+            // 
+            relojToolStripMenuItem.Name = "relojToolStripMenuItem";
+            relojToolStripMenuItem.Size = new Size(270, 34);
+            relojToolStripMenuItem.Text = "Reloj";
+            relojToolStripMenuItem.Click += relojToolStripMenuItem_Click;
             // 
             // frmMenu
             // 
@@ -106,5 +114,6 @@
         private ToolStripMenuItem aplicacionesToolStripMenuItem;
         private ToolStripMenuItem aplicacionSToolStripMenuItem;
         private ToolStripMenuItem operacionesToolStripMenuItem;
+        private ToolStripMenuItem relojToolStripMenuItem;
     }
 }

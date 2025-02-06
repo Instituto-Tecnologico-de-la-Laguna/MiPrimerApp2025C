@@ -44,5 +44,11 @@ namespace MiPrimerApp2025C
             frmOperacion2Numeros operaciones = new frmOperacion2Numeros();
             operaciones.Show();
         }
+
+        private void relojToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTemporizador tem = new frmTemporizador();
+            tem.Show();
+        }
     }
 }
