@@ -33,6 +33,8 @@
             aplicacionesToolStripMenuItem = new ToolStripMenuItem();
             aplicacionSimpleToolStripMenuItem = new ToolStripMenuItem();
             operacionesCon2ValoresToolStripMenuItem = new ToolStripMenuItem();
+            temporizadorToolStripMenuItem = new ToolStripMenuItem();
+            salirToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -48,13 +50,14 @@
             // 
             // aRchivoToolStripMenuItem
             // 
+            aRchivoToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { salirToolStripMenuItem });
             aRchivoToolStripMenuItem.Name = "aRchivoToolStripMenuItem";
             aRchivoToolStripMenuItem.Size = new Size(73, 24);
             aRchivoToolStripMenuItem.Text = "Archivo";
             // 
             // aplicacionesToolStripMenuItem
             // 
-            aplicacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { aplicacionSimpleToolStripMenuItem, operacionesCon2ValoresToolStripMenuItem });
+            aplicacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { aplicacionSimpleToolStripMenuItem, operacionesCon2ValoresToolStripMenuItem, temporizadorToolStripMenuItem });
             aplicacionesToolStripMenuItem.Name = "aplicacionesToolStripMenuItem";
             aplicacionesToolStripMenuItem.Size = new Size(107, 24);
             aplicacionesToolStripMenuItem.Text = "Aplicaciones";
@@ -72,6 +75,20 @@
             operacionesCon2ValoresToolStripMenuItem.Size = new Size(267, 26);
             operacionesCon2ValoresToolStripMenuItem.Text = "Operaciones con 2 Valores";
             operacionesCon2ValoresToolStripMenuItem.Click += operacionesCon2ValoresToolStripMenuItem_Click;
+            // 
+            // temporizadorToolStripMenuItem
+            // 
+            temporizadorToolStripMenuItem.Name = "temporizadorToolStripMenuItem";
+            temporizadorToolStripMenuItem.Size = new Size(267, 26);
+            temporizadorToolStripMenuItem.Text = "Temporizador";
+            temporizadorToolStripMenuItem.Click += temporizadorToolStripMenuItem_Click;
+            // 
+            // salirToolStripMenuItem
+            // 
+            salirToolStripMenuItem.Name = "salirToolStripMenuItem";
+            salirToolStripMenuItem.Size = new Size(224, 26);
+            salirToolStripMenuItem.Text = "Salir";
+            salirToolStripMenuItem.Click += salirToolStripMenuItem_Click;
             // 
             // frmMenu
             // 
@@ -96,5 +113,7 @@
         private ToolStripMenuItem aplicacionesToolStripMenuItem;
         private ToolStripMenuItem aplicacionSimpleToolStripMenuItem;
         private ToolStripMenuItem operacionesCon2ValoresToolStripMenuItem;
+        private ToolStripMenuItem temporizadorToolStripMenuItem;
+        private ToolStripMenuItem salirToolStripMenuItem;
     }
 }
