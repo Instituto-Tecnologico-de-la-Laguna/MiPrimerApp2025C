@@ -1,5 +1,4 @@
-﻿using Microsoft.VisualBasic.ApplicationServices;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -18,35 +17,29 @@ namespace MiPrimerApp2025C
             InitializeComponent();
         }
 
-        private void tmrReloj_Tick(object sender, EventArgs e)
+        private void tmrREloj_Tick(object sender, EventArgs e)
         {
-            lblReloj.Text = DateTime.Now.ToString("hh:mm:ss");
-            if (chkHabilitar.Checked == true)
+            lblTemporizador.Text = DateTime.Now.ToString("HH:mm:ss");
+            if(chkHabilitar.Checked == true )
             {
-               if(mktAlarma.Text == lblReloj.Text)
+                if (mktAlarma.Text == lblTemporizador.Text)
                 {
-                    axWindowsMediaPlayer1.URL = 
-                        @"C:\Users\Jose Luis\Downloads\ringtones-militar-trompeta.mp3";
+                    axWindowsMediaPlayer1.URL = @"C:\Users\danar\Downloads\rooster-crowing-in-turkey-142039.mp3";
                 }
             }
+
         }
 
         private void chkHabilitar_CheckedChanged(object sender, EventArgs e)
         {
-            if (chkHabilitar.Checked == true)
+            if(chkHabilitar.Checked == true)
             {
                 mktAlarma.Enabled = false;
-
             }
             else
             {
-                mktAlarma.Enabled = true;
+                mktAlarma.Enabled= true;
             }
-        }
-
-        private void lblReloj_Click(object sender, EventArgs e)
-        {
-
         }
     }
 }

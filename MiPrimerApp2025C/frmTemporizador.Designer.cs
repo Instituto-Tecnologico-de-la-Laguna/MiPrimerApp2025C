@@ -30,46 +30,44 @@
         {
             components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmTemporizador));
-            tmrReloj = new System.Windows.Forms.Timer(components);
-            lblReloj = new Label();
+            tmrREloj = new System.Windows.Forms.Timer(components);
+            lblTemporizador = new Label();
             mktAlarma = new MaskedTextBox();
             chkHabilitar = new CheckBox();
             axWindowsMediaPlayer1 = new AxWMPLib.AxWindowsMediaPlayer();
             ((System.ComponentModel.ISupportInitialize)axWindowsMediaPlayer1).BeginInit();
             SuspendLayout();
             // 
-            // tmrReloj
+            // tmrREloj
             // 
-            tmrReloj.Enabled = true;
-            tmrReloj.Interval = 1000;
-            tmrReloj.Tick += tmrReloj_Tick;
+            tmrREloj.Enabled = true;
+            tmrREloj.Tick += tmrREloj_Tick;
             // 
-            // lblReloj
+            // lblTemporizador
             // 
-            lblReloj.AutoSize = true;
-            lblReloj.Font = new Font("Arial", 48F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblReloj.Location = new Point(137, 35);
-            lblReloj.Name = "lblReloj";
-            lblReloj.Size = new Size(427, 111);
-            lblReloj.TabIndex = 0;
-            lblReloj.Text = "00:00:00";
-            lblReloj.Click += lblReloj_Click;
+            lblTemporizador.AutoSize = true;
+            lblTemporizador.Font = new Font("Arial", 48F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTemporizador.Location = new Point(149, 28);
+            lblTemporizador.Name = "lblTemporizador";
+            lblTemporizador.Size = new Size(358, 93);
+            lblTemporizador.TabIndex = 0;
+            lblTemporizador.Text = "00:00:00";
             // 
             // mktAlarma
             // 
-            mktAlarma.Location = new Point(25, 220);
+            mktAlarma.Location = new Point(65, 196);
             mktAlarma.Mask = "00:00:00";
             mktAlarma.Name = "mktAlarma";
-            mktAlarma.Size = new Size(150, 31);
+            mktAlarma.Size = new Size(125, 27);
             mktAlarma.TabIndex = 1;
             mktAlarma.ValidatingType = typeof(DateTime);
             // 
             // chkHabilitar
             // 
             chkHabilitar.AutoSize = true;
-            chkHabilitar.Location = new Point(195, 222);
+            chkHabilitar.Location = new Point(230, 200);
             chkHabilitar.Name = "chkHabilitar";
-            chkHabilitar.Size = new Size(104, 29);
+            chkHabilitar.Size = new Size(89, 24);
             chkHabilitar.TabIndex = 2;
             chkHabilitar.Text = "Habilitar";
             chkHabilitar.UseVisualStyleBackColor = true;
@@ -78,23 +76,23 @@
             // axWindowsMediaPlayer1
             // 
             axWindowsMediaPlayer1.Enabled = true;
-            axWindowsMediaPlayer1.Location = new Point(398, 207);
+            axWindowsMediaPlayer1.Location = new Point(554, 196);
             axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
             axWindowsMediaPlayer1.OcxState = (AxHost.State)resources.GetObject("axWindowsMediaPlayer1.OcxState");
-            axWindowsMediaPlayer1.Size = new Size(317, 62);
+            axWindowsMediaPlayer1.Size = new Size(224, 46);
             axWindowsMediaPlayer1.TabIndex = 3;
             // 
             // frmTemporizador
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(727, 272);
+            ClientSize = new Size(833, 317);
             Controls.Add(axWindowsMediaPlayer1);
             Controls.Add(chkHabilitar);
             Controls.Add(mktAlarma);
-            Controls.Add(lblReloj);
+            Controls.Add(lblTemporizador);
             Name = "frmTemporizador";
-            Text = "Reloj";
+            Text = "REloj";
             ((System.ComponentModel.ISupportInitialize)axWindowsMediaPlayer1).EndInit();
             ResumeLayout(false);
             PerformLayout();
@@ -102,8 +100,8 @@
 
         #endregion
 
-        private System.Windows.Forms.Timer tmrReloj;
-        private Label lblReloj;
+        private System.Windows.Forms.Timer tmrREloj;
+        private Label lblTemporizador;
         private MaskedTextBox mktAlarma;
         private CheckBox chkHabilitar;
         private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
