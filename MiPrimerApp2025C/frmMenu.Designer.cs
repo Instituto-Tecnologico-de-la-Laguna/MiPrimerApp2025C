@@ -34,6 +34,7 @@
             aplicacionesToolStripMenuItem = new ToolStripMenuItem();
             aplicacionesSimpleToolStripMenuItem = new ToolStripMenuItem();
             operacionesCon2ValoresToolStripMenuItem = new ToolStripMenuItem();
+            relojToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -56,13 +57,13 @@
             // salirToolStripMenuItem
             // 
             salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            salirToolStripMenuItem.Size = new Size(180, 22);
+            salirToolStripMenuItem.Size = new Size(96, 22);
             salirToolStripMenuItem.Text = "Salir";
             salirToolStripMenuItem.Click += salirToolStripMenuItem_Click;
             // 
             // aplicacionesToolStripMenuItem
             // 
-            aplicacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { aplicacionesSimpleToolStripMenuItem, operacionesCon2ValoresToolStripMenuItem });
+            aplicacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { aplicacionesSimpleToolStripMenuItem, operacionesCon2ValoresToolStripMenuItem, relojToolStripMenuItem });
             aplicacionesToolStripMenuItem.Name = "aplicacionesToolStripMenuItem";
             aplicacionesToolStripMenuItem.Size = new Size(86, 20);
             aplicacionesToolStripMenuItem.Text = "Aplicaciones";
@@ -80,6 +81,13 @@
             operacionesCon2ValoresToolStripMenuItem.Size = new Size(214, 22);
             operacionesCon2ValoresToolStripMenuItem.Text = "Operaciones Con 2 Valores";
             operacionesCon2ValoresToolStripMenuItem.Click += operacionesCon2ValoresToolStripMenuItem_Click;
+            // 
+            // relojToolStripMenuItem
+            // 
+            relojToolStripMenuItem.Name = "relojToolStripMenuItem";
+            relojToolStripMenuItem.Size = new Size(214, 22);
+            relojToolStripMenuItem.Text = "Temporizador";
+            relojToolStripMenuItem.Click += relojToolStripMenuItem_Click;
             // 
             // frmMenu
             // 
@@ -104,5 +112,6 @@
         private ToolStripMenuItem salirToolStripMenuItem;
         private ToolStripMenuItem aplicacionesSimpleToolStripMenuItem;
         private ToolStripMenuItem operacionesCon2ValoresToolStripMenuItem;
+        private ToolStripMenuItem relojToolStripMenuItem;
     }
 }
