@@ -39,6 +39,7 @@
             rdbResta = new RadioButton();
             rdbSuma = new RadioButton();
             buttonBorrar = new Button();
+            label3 = new Label();
             groupBox1.SuspendLayout();
             SuspendLayout();
             // 
@@ -90,12 +91,12 @@
             groupBox1.Controls.Add(rdbMultiplicacion);
             groupBox1.Controls.Add(rdbResta);
             groupBox1.Controls.Add(rdbSuma);
-            groupBox1.Location = new Point(53, 281);
+            groupBox1.Location = new Point(25, 259);
             groupBox1.Name = "groupBox1";
             groupBox1.Size = new Size(362, 150);
             groupBox1.TabIndex = 5;
             groupBox1.TabStop = false;
-            groupBox1.Text = "Operaciones";
+            groupBox1.Text = "Selecciona una Operacion: ";
             // 
             // rdbDivision
             // 
@@ -143,7 +144,7 @@
             // 
             // buttonBorrar
             // 
-            buttonBorrar.Location = new Point(350, 130);
+            buttonBorrar.Location = new Point(342, 119);
             buttonBorrar.Name = "buttonBorrar";
             buttonBorrar.Size = new Size(112, 34);
             buttonBorrar.TabIndex = 6;
@@ -151,11 +152,21 @@
             buttonBorrar.UseVisualStyleBackColor = true;
             buttonBorrar.Click += buttonBorrar_Click;
             // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new Point(25, 231);
+            label3.Name = "label3";
+            label3.Size = new Size(195, 25);
+            label3.TabIndex = 7;
+            label3.Text = "Menu de Operaciones :";
+            // 
             // frmOperacion2Numeros
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(651, 467);
+            ClientSize = new Size(534, 467);
+            Controls.Add(label3);
             Controls.Add(buttonBorrar);
             Controls.Add(groupBox1);
             Controls.Add(btnCalcular);
@@ -164,7 +175,7 @@
             Controls.Add(label2);
             Controls.Add(label1);
             Name = "frmOperacion2Numeros";
-            Text = "Operaciones 2 Numeros ";
+            Text = " ";
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ResumeLayout(false);
@@ -184,5 +195,6 @@
         private RadioButton rdbSuma;
         private RadioButton rdbDivision;
         private Button buttonBorrar;
+        private Label label3;
     }
 }

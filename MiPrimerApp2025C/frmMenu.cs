@@ -31,7 +31,13 @@ namespace MiPrimerApp2025C
         private void operaciones2NumerosToolStripMenuItem_Click(object sender, EventArgs e)
         {
             frmOperacion2Numeros frmOperacion2Numeros = new frmOperacion2Numeros();
-            frmOperacion2Numeros.Show();    
+            frmOperacion2Numeros.Show();
+        }
+
+        private void temporizadorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTemporizador frmReloj = new frmTemporizador();
+            frmReloj.Show();
         }
     }
 }

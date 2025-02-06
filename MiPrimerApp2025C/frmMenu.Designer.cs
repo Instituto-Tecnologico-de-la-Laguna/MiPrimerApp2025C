@@ -34,6 +34,7 @@
             aplicacionesToolStripMenuItem = new ToolStripMenuItem();
             aplicacionSimpleToolStripMenuItem = new ToolStripMenuItem();
             operaciones2NumerosToolStripMenuItem = new ToolStripMenuItem();
+            temporizadorToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -63,7 +64,7 @@
             // 
             // aplicacionesToolStripMenuItem
             // 
-            aplicacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { aplicacionSimpleToolStripMenuItem, operaciones2NumerosToolStripMenuItem });
+            aplicacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { aplicacionSimpleToolStripMenuItem, operaciones2NumerosToolStripMenuItem, temporizadorToolStripMenuItem });
             aplicacionesToolStripMenuItem.Name = "aplicacionesToolStripMenuItem";
             aplicacionesToolStripMenuItem.Size = new Size(126, 29);
             aplicacionesToolStripMenuItem.Text = "Aplicaciones";
@@ -71,7 +72,7 @@
             // aplicacionSimpleToolStripMenuItem
             // 
             aplicacionSimpleToolStripMenuItem.Name = "aplicacionSimpleToolStripMenuItem";
-            aplicacionSimpleToolStripMenuItem.Size = new Size(270, 34);
+            aplicacionSimpleToolStripMenuItem.Size = new Size(306, 34);
             aplicacionSimpleToolStripMenuItem.Text = "Aplicacion Simple";
             aplicacionSimpleToolStripMenuItem.Click += aplicacionSimpleToolStripMenuItem_Click;
             // 
@@ -81,6 +82,13 @@
             operaciones2NumerosToolStripMenuItem.Size = new Size(306, 34);
             operaciones2NumerosToolStripMenuItem.Text = "Operaciones 2 Numeros";
             operaciones2NumerosToolStripMenuItem.Click += operaciones2NumerosToolStripMenuItem_Click;
+            // 
+            // temporizadorToolStripMenuItem
+            // 
+            temporizadorToolStripMenuItem.Name = "temporizadorToolStripMenuItem";
+            temporizadorToolStripMenuItem.Size = new Size(306, 34);
+            temporizadorToolStripMenuItem.Text = "Reloj";
+            temporizadorToolStripMenuItem.Click += temporizadorToolStripMenuItem_Click;
             // 
             // frmMenu
             // 
@@ -105,5 +113,6 @@
         private ToolStripMenuItem aplicacionesToolStripMenuItem;
         private ToolStripMenuItem aplicacionSimpleToolStripMenuItem;
         private ToolStripMenuItem operaciones2NumerosToolStripMenuItem;
+        private ToolStripMenuItem temporizadorToolStripMenuItem;
     }
 }
