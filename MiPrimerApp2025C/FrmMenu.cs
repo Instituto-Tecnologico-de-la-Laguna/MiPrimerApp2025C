@@ -33,5 +33,11 @@ namespace MiPrimerApp2025C
             FrmOperacion2Numeros AppOperaciones = new FrmOperacion2Numeros();
             AppOperaciones.Show();
         }
+
+        private void TemporizadorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormTemporizador AppOperaciones = new FormTemporizador();
+            AppOperaciones.Show();
+        }
     }
 }
