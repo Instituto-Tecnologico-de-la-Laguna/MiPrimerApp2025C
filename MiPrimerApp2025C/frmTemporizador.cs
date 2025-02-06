@@ -44,6 +44,7 @@ namespace MiPrimerApp2025C
             if ( chbHabil.Checked==true)
             {
                 mktAlarma.Enabled = true;
+                //EL CAMBIO
             }
             else
             {
