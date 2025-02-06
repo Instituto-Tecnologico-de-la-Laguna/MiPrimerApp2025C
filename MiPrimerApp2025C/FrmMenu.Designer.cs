@@ -35,6 +35,7 @@ namespace MiPrimerApp2025C
             aplicacionesToolStripMenuItem = new ToolStripMenuItem();
             aplicaciónSimpleToolStripMenuItem = new ToolStripMenuItem();
             operacionesDe2ValoresToolStripMenuItem = new ToolStripMenuItem();
+            temporizadorToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -63,7 +64,7 @@ namespace MiPrimerApp2025C
             // 
             // aplicacionesToolStripMenuItem
             // 
-            aplicacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { aplicaciónSimpleToolStripMenuItem, operacionesDe2ValoresToolStripMenuItem });
+            aplicacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { aplicaciónSimpleToolStripMenuItem, operacionesDe2ValoresToolStripMenuItem, temporizadorToolStripMenuItem });
             aplicacionesToolStripMenuItem.Name = "aplicacionesToolStripMenuItem";
             aplicacionesToolStripMenuItem.Size = new Size(86, 20);
             aplicacionesToolStripMenuItem.Text = "Aplicaciones";
@@ -82,6 +83,13 @@ namespace MiPrimerApp2025C
             operacionesDe2ValoresToolStripMenuItem.Size = new Size(205, 22);
             operacionesDe2ValoresToolStripMenuItem.Text = "Operaciones de 2 valores";
             operacionesDe2ValoresToolStripMenuItem.Click += operacionesDe2ValoresToolStripMenuItem_Click;
+            // 
+            // temporizadorToolStripMenuItem
+            // 
+            temporizadorToolStripMenuItem.Name = "temporizadorToolStripMenuItem";
+            temporizadorToolStripMenuItem.Size = new Size(205, 22);
+            temporizadorToolStripMenuItem.Text = "Temporizador";
+            temporizadorToolStripMenuItem.Click += temporizadorToolStripMenuItem_Click;
             // 
             // FrmMenu
             // 
@@ -123,5 +131,6 @@ namespace MiPrimerApp2025C
         private ToolStripMenuItem aplicacionesToolStripMenuItem;
         private ToolStripMenuItem aplicaciónSimpleToolStripMenuItem;
         private ToolStripMenuItem operacionesDe2ValoresToolStripMenuItem;
+        private ToolStripMenuItem temporizadorToolStripMenuItem;
     }
 }

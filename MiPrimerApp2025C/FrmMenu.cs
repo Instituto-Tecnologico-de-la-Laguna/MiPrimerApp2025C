@@ -22,5 +22,11 @@ namespace MiPrimerApp2025C
             FrmOperacion2Numeros AppOperacionesCon2Valores = new FrmOperacion2Numeros();
             AppOperacionesCon2Valores.Show();
         }
+
+        private void temporizadorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTemporizador Reloj = new frmTemporizador();
+            Reloj.Show();
+        }
     }
 }
