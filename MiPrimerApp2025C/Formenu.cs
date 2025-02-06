@@ -34,5 +34,11 @@ namespace MiPrimerApp2025C
             Form2 apl2 = new Form2();
             apl2.Show();
         }
+
+        private void termporizadorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTemporizados otmp= new frmTemporizados();
+            otmp.Show();
+        }
     }
 }

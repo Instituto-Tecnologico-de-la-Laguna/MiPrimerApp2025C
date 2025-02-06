@@ -34,6 +34,7 @@
             aplicacionesToolStripMenuItem = new ToolStripMenuItem();
             aplicacionSimpleToolStripMenuItem = new ToolStripMenuItem();
             operacionDe2NumerosToolStripMenuItem = new ToolStripMenuItem();
+            termporizadorToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -61,7 +62,7 @@
             // 
             // aplicacionesToolStripMenuItem
             // 
-            aplicacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { aplicacionSimpleToolStripMenuItem, operacionDe2NumerosToolStripMenuItem });
+            aplicacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { aplicacionSimpleToolStripMenuItem, operacionDe2NumerosToolStripMenuItem, termporizadorToolStripMenuItem });
             aplicacionesToolStripMenuItem.Name = "aplicacionesToolStripMenuItem";
             aplicacionesToolStripMenuItem.Size = new Size(86, 20);
             aplicacionesToolStripMenuItem.Text = "Aplicaciones";
@@ -79,6 +80,13 @@
             operacionDe2NumerosToolStripMenuItem.Size = new Size(202, 22);
             operacionDe2NumerosToolStripMenuItem.Text = "operacion de 2 numeros";
             operacionDe2NumerosToolStripMenuItem.Click += operacionDe2NumerosToolStripMenuItem_Click;
+            // 
+            // termporizadorToolStripMenuItem
+            // 
+            termporizadorToolStripMenuItem.Name = "termporizadorToolStripMenuItem";
+            termporizadorToolStripMenuItem.Size = new Size(202, 22);
+            termporizadorToolStripMenuItem.Text = "termporizador";
+            termporizadorToolStripMenuItem.Click += termporizadorToolStripMenuItem_Click;
             // 
             // Formenu
             // 
@@ -104,5 +112,6 @@
         private ToolStripMenuItem salirToolStripMenuItem1;
         private ToolStripMenuItem aplicacionSimpleToolStripMenuItem;
         private ToolStripMenuItem operacionDe2NumerosToolStripMenuItem;
+        private ToolStripMenuItem termporizadorToolStripMenuItem;
     }
 }
