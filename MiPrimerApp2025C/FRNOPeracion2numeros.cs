@@ -25,7 +25,8 @@ namespace MiPrimerApp2025C
                 val1 = Convert.ToDouble(TXTValor1.Text);
                 val2 = double.Parse(TXTValor2.Text);
             }
-            catch (Exception ex) {
+            catch (Exception ex)
+            {
                 MessageBox.Show("Ingrese valores numericos");
                 return;
             }
@@ -52,6 +53,11 @@ namespace MiPrimerApp2025C
         {
             TXTValor1.Clear();
             TXTValor2.Clear();
+        }
+
+        private void FRNOPeracion2numeros_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

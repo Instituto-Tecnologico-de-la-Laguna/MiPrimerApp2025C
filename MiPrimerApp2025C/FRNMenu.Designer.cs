@@ -33,6 +33,8 @@
             abToolStripMenuItem = new ToolStripMenuItem();
             aplicacionToolStripMenuItem = new ToolStripMenuItem();
             operacion2ValoresToolStripMenuItem = new ToolStripMenuItem();
+            nombreToolStripMenuItem = new ToolStripMenuItem();
+            temporizadorToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -50,19 +52,19 @@
             // 
             toolStripMenuItem1.DropDownItems.AddRange(new ToolStripItem[] { abToolStripMenuItem });
             toolStripMenuItem1.Name = "toolStripMenuItem1";
-            toolStripMenuItem1.Size = new Size(78, 24);
-            toolStripMenuItem1.Text = "Nombre";
+            toolStripMenuItem1.Size = new Size(73, 24);
+            toolStripMenuItem1.Text = "Archivo";
             // 
             // abToolStripMenuItem
             // 
             abToolStripMenuItem.Name = "abToolStripMenuItem";
-            abToolStripMenuItem.Size = new Size(224, 26);
-            abToolStripMenuItem.Text = "Nombre";
+            abToolStripMenuItem.Size = new Size(121, 26);
+            abToolStripMenuItem.Text = "Salir";
             abToolStripMenuItem.Click += abToolStripMenuItem_Click;
             // 
             // aplicacionToolStripMenuItem
             // 
-            aplicacionToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { operacion2ValoresToolStripMenuItem });
+            aplicacionToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { operacion2ValoresToolStripMenuItem, nombreToolStripMenuItem, temporizadorToolStripMenuItem });
             aplicacionToolStripMenuItem.Name = "aplicacionToolStripMenuItem";
             aplicacionToolStripMenuItem.Size = new Size(93, 24);
             aplicacionToolStripMenuItem.Text = "Aplicacion";
@@ -73,6 +75,20 @@
             operacion2ValoresToolStripMenuItem.Size = new Size(224, 26);
             operacion2ValoresToolStripMenuItem.Text = "Operacion 2 valores";
             operacion2ValoresToolStripMenuItem.Click += operacion2ValoresToolStripMenuItem_Click;
+            // 
+            // nombreToolStripMenuItem
+            // 
+            nombreToolStripMenuItem.Name = "nombreToolStripMenuItem";
+            nombreToolStripMenuItem.Size = new Size(224, 26);
+            nombreToolStripMenuItem.Text = "Nombre";
+            nombreToolStripMenuItem.Click += nombreToolStripMenuItem_Click;
+            // 
+            // temporizadorToolStripMenuItem
+            // 
+            temporizadorToolStripMenuItem.Name = "temporizadorToolStripMenuItem";
+            temporizadorToolStripMenuItem.Size = new Size(224, 26);
+            temporizadorToolStripMenuItem.Text = "Temporizador";
+            temporizadorToolStripMenuItem.Click += temporizadorToolStripMenuItem_Click;
             // 
             // FRNMenu
             // 
@@ -96,5 +112,7 @@
         private ToolStripMenuItem abToolStripMenuItem;
         private ToolStripMenuItem aplicacionToolStripMenuItem;
         private ToolStripMenuItem operacion2ValoresToolStripMenuItem;
+        private ToolStripMenuItem nombreToolStripMenuItem;
+        private ToolStripMenuItem temporizadorToolStripMenuItem;
     }
 }

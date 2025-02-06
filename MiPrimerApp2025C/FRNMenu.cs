@@ -19,14 +19,25 @@ namespace MiPrimerApp2025C
 
         private void abToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FRNMenu menu = new FRNMenu();
-            menu.Show(this);
+
         }
 
         private void operacion2ValoresToolStripMenuItem_Click(object sender, EventArgs e)
         {
             FRNOPeracion2numeros op2num = new FRNOPeracion2numeros();
             op2num.Show();
+        }
+
+        private void nombreToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form1 frm = new Form1();
+            frm.Show();
+        }
+
+        private void temporizadorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TNRReloj reloj = new TNRReloj();
+            reloj.Show();
         }
     }
 }

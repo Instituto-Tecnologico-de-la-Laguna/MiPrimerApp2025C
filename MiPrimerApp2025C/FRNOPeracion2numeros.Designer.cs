@@ -165,6 +165,7 @@
             Controls.Add(label1);
             Name = "FRNOPeracion2numeros";
             Text = "Operaciones 2 Numeros";
+            Load += FRNOPeracion2numeros_Load;
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
             ResumeLayout(false);
