@@ -34,6 +34,7 @@
             aplicacionesToolStripMenuItem = new ToolStripMenuItem();
             appSimpleToolStripMenuItem = new ToolStripMenuItem();
             appOp2NumerosToolStripMenuItem = new ToolStripMenuItem();
+            temporizadorToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -62,7 +63,7 @@
             // 
             // aplicacionesToolStripMenuItem
             // 
-            aplicacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { appSimpleToolStripMenuItem, appOp2NumerosToolStripMenuItem });
+            aplicacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { appSimpleToolStripMenuItem, appOp2NumerosToolStripMenuItem, temporizadorToolStripMenuItem });
             aplicacionesToolStripMenuItem.Name = "aplicacionesToolStripMenuItem";
             aplicacionesToolStripMenuItem.Size = new Size(86, 20);
             aplicacionesToolStripMenuItem.Text = "Aplicaciones";
@@ -80,6 +81,13 @@
             appOp2NumerosToolStripMenuItem.Size = new Size(180, 22);
             appOp2NumerosToolStripMenuItem.Text = "App Op 2 numeros";
             appOp2NumerosToolStripMenuItem.Click += appOp2NumerosToolStripMenuItem_Click;
+            // 
+            // temporizadorToolStripMenuItem
+            // 
+            temporizadorToolStripMenuItem.Name = "temporizadorToolStripMenuItem";
+            temporizadorToolStripMenuItem.Size = new Size(180, 22);
+            temporizadorToolStripMenuItem.Text = "Temporizador";
+            temporizadorToolStripMenuItem.Click += temporizadorToolStripMenuItem_Click;
             // 
             // frmMenu
             // 
@@ -104,5 +112,6 @@
         private ToolStripMenuItem aplicacionesToolStripMenuItem;
         private ToolStripMenuItem appSimpleToolStripMenuItem;
         private ToolStripMenuItem appOp2NumerosToolStripMenuItem;
+        private ToolStripMenuItem temporizadorToolStripMenuItem;
     }
 }
