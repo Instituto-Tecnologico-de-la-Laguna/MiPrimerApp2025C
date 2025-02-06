@@ -19,11 +19,11 @@ namespace MiPrimerApp2025C
 
         private void btnCalcular_Click(object sender, EventArgs e)
         {
-            Double valor1, valor2;
+            double valor1, valor2;
             try
             {
                 valor1 = Convert.ToDouble(txtValor1.Text);
-                valor2 = Double.Parse(txtValor2.Text);
+                valor2 = double.Parse(txtValor2.Text);
             }
             catch (Exception ex)
             {
