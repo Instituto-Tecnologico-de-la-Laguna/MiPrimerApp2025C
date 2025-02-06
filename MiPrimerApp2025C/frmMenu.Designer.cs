@@ -43,7 +43,8 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { archivoToolStripMenuItem, aplicacionesToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(800, 33);
+            menuStrip1.Padding = new Padding(5, 2, 0, 2);
+            menuStrip1.Size = new Size(640, 28);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -51,13 +52,13 @@
             // 
             archivoToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { salirToolStripMenuItem });
             archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
-            archivoToolStripMenuItem.Size = new Size(88, 29);
+            archivoToolStripMenuItem.Size = new Size(73, 24);
             archivoToolStripMenuItem.Text = "Archivo";
             // 
             // salirToolStripMenuItem
             // 
             salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            salirToolStripMenuItem.Size = new Size(147, 34);
+            salirToolStripMenuItem.Size = new Size(121, 26);
             salirToolStripMenuItem.Text = "Salir";
             salirToolStripMenuItem.Click += salirToolStripMenuItem_Click;
             // 
@@ -65,30 +66,31 @@
             // 
             aplicacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { aplicacionSimpleToolStripMenuItem, operacionesCon2ValoresToolStripMenuItem });
             aplicacionesToolStripMenuItem.Name = "aplicacionesToolStripMenuItem";
-            aplicacionesToolStripMenuItem.Size = new Size(126, 29);
+            aplicacionesToolStripMenuItem.Size = new Size(107, 24);
             aplicacionesToolStripMenuItem.Text = "Aplicaciones";
             // 
             // aplicacionSimpleToolStripMenuItem
             // 
             aplicacionSimpleToolStripMenuItem.Name = "aplicacionSimpleToolStripMenuItem";
-            aplicacionSimpleToolStripMenuItem.Size = new Size(324, 34);
+            aplicacionSimpleToolStripMenuItem.Size = new Size(267, 26);
             aplicacionSimpleToolStripMenuItem.Text = "Aplicacion Simple";
             aplicacionSimpleToolStripMenuItem.Click += aplicacionSimpleToolStripMenuItem_Click;
             // 
             // operacionesCon2ValoresToolStripMenuItem
             // 
             operacionesCon2ValoresToolStripMenuItem.Name = "operacionesCon2ValoresToolStripMenuItem";
-            operacionesCon2ValoresToolStripMenuItem.Size = new Size(324, 34);
+            operacionesCon2ValoresToolStripMenuItem.Size = new Size(267, 26);
             operacionesCon2ValoresToolStripMenuItem.Text = "Operaciones con 2 Valores";
             operacionesCon2ValoresToolStripMenuItem.Click += operacionesCon2ValoresToolStripMenuItem_Click;
             // 
             // frmMenu
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(640, 360);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
+            Margin = new Padding(2, 2, 2, 2);
             Name = "frmMenu";
             Text = "Menu de Aplicaciones en Clase";
             menuStrip1.ResumeLayout(false);
