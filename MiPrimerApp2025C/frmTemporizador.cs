@@ -17,41 +17,40 @@ namespace MiPrimerApp2025C
             InitializeComponent();
         }
 
-        private void tmr_Tick(object sender, EventArgs e)
-        {
-            lblReloj.Text = DateTime.Now.ToString("hh:mm:ss");
-            if (chkhabilitar.Checked == true)
-            {
-               if(mktAlarma.Text == lblReloj.Text)
-                {
-                    axWindowsMediaPlayer1.URL = 
-                        @"C:\Users\Jose Luis\Downloads\ringtones-militar-trompeta.mp3";
-                }
-
-            }
-
-        }
-
-        private void maskedTextBox1_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        private void label1_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void chkhabilitar_CheckedChanged(object sender, EventArgs e)
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
         {
-            if (chkhabilitar.Checked == true)
+            if (chkHabilitar.Checked == true)
             {
-                mktalarma.Enabled = false;
+                mktAlarma.Enabled = false;
+
             }
             else
             {
-                mktalarma.Enabled = true;
+                mktAlarma.Enabled = true;
             }
         }
 
         private void mktAlarma_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
 
+        }
+
+        private void tmrReloj_Tick(object sender, EventArgs e)
+        {
+            lblReloj.Text = DateTime.Now.ToString("hh:mm:ss");
+            if (chkHabilitar.Checked == true)
+            {
+                if (mktAlarma.Text == lblReloj.Text)
+                {
+                    axWindowsMediaPlayer1.URL =
+                        @"C:\Users\Hp\Downloads\alarama.mp3";
+                }
+            }
         }
     }
 }
