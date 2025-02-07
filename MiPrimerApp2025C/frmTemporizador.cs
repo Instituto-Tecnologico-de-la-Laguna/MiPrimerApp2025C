@@ -22,9 +22,10 @@ namespace MiPrimerApp2025C
             lblReloj.Text = DateTime.Now.ToString("hh:mm:ss");
             if (chkhabilitar.Checked == true)
             {
-                if (mktalarma.Text == lblReloj.Text)
+               if(mktAlarma.Text == lblReloj.Text)
                 {
-                    axWindowsMediaPlayer1.URL = @"C:\Users\Hp\Downloads\alarma.mp3";
+                    axWindowsMediaPlayer1.URL = 
+                        @"C:\Users\Jose Luis\Downloads\ringtones-militar-trompeta.mp3";
                 }
 
             }
@@ -46,6 +47,11 @@ namespace MiPrimerApp2025C
             {
                 mktalarma.Enabled = true;
             }
+        }
+
+        private void mktAlarma_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
         }
     }
 }
