@@ -43,5 +43,12 @@ namespace MiPrimerApp2025C
             fmrTemporizador temporizador = new fmrTemporizador();
             temporizador.Show();
         }
+
+        private void editorDeTextoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+           FmrEditorcs editor = new FmrEditorcs();
+            editor.Show();
+            
+        }
     }
 }

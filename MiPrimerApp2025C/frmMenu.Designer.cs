@@ -35,6 +35,7 @@
             appSimpleToolStripMenuItem = new ToolStripMenuItem();
             operacionesCon2ValoresToolStripMenuItem = new ToolStripMenuItem();
             temporizadorToolStripMenuItem = new ToolStripMenuItem();
+            editorDeTextoToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -58,13 +59,13 @@
             // salirToolStripMenuItem
             // 
             salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            salirToolStripMenuItem.Size = new Size(121, 26);
+            salirToolStripMenuItem.Size = new Size(224, 26);
             salirToolStripMenuItem.Text = "Salir";
             salirToolStripMenuItem.Click += salirToolStripMenuItem_Click;
             // 
             // aplicacionesToolStripMenuItem
             // 
-            aplicacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { appSimpleToolStripMenuItem, operacionesCon2ValoresToolStripMenuItem, temporizadorToolStripMenuItem });
+            aplicacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { appSimpleToolStripMenuItem, operacionesCon2ValoresToolStripMenuItem, temporizadorToolStripMenuItem, editorDeTextoToolStripMenuItem });
             aplicacionesToolStripMenuItem.Name = "aplicacionesToolStripMenuItem";
             aplicacionesToolStripMenuItem.Size = new Size(107, 24);
             aplicacionesToolStripMenuItem.Text = "Aplicaciones";
@@ -90,6 +91,13 @@
             temporizadorToolStripMenuItem.Text = "Temporizador";
             temporizadorToolStripMenuItem.Click += temporizadorToolStripMenuItem_Click;
             // 
+            // editorDeTextoToolStripMenuItem
+            // 
+            editorDeTextoToolStripMenuItem.Name = "editorDeTextoToolStripMenuItem";
+            editorDeTextoToolStripMenuItem.Size = new Size(266, 26);
+            editorDeTextoToolStripMenuItem.Text = "Editor de Texto";
+            editorDeTextoToolStripMenuItem.Click += editorDeTextoToolStripMenuItem_Click;
+            // 
             // frmMenu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -114,5 +122,6 @@
         private ToolStripMenuItem appSimpleToolStripMenuItem;
         private ToolStripMenuItem operacionesCon2ValoresToolStripMenuItem;
         private ToolStripMenuItem temporizadorToolStripMenuItem;
+        private ToolStripMenuItem editorDeTextoToolStripMenuItem;
     }
 }
