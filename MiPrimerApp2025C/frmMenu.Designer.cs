@@ -35,6 +35,7 @@
             aplicacionSimpleToolStripMenuItem = new ToolStripMenuItem();
             operaciones2NumerosToolStripMenuItem = new ToolStripMenuItem();
             temporizadorToolStripMenuItem = new ToolStripMenuItem();
+            editorDeTextoToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -64,7 +65,7 @@
             // 
             // aplicacionesToolStripMenuItem
             // 
-            aplicacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { aplicacionSimpleToolStripMenuItem, operaciones2NumerosToolStripMenuItem, temporizadorToolStripMenuItem });
+            aplicacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { aplicacionSimpleToolStripMenuItem, operaciones2NumerosToolStripMenuItem, temporizadorToolStripMenuItem, editorDeTextoToolStripMenuItem });
             aplicacionesToolStripMenuItem.Name = "aplicacionesToolStripMenuItem";
             aplicacionesToolStripMenuItem.Size = new Size(126, 29);
             aplicacionesToolStripMenuItem.Text = "Aplicaciones";
@@ -90,6 +91,13 @@
             temporizadorToolStripMenuItem.Text = "Reloj";
             temporizadorToolStripMenuItem.Click += temporizadorToolStripMenuItem_Click;
             // 
+            // editorDeTextoToolStripMenuItem
+            // 
+            editorDeTextoToolStripMenuItem.Name = "editorDeTextoToolStripMenuItem";
+            editorDeTextoToolStripMenuItem.Size = new Size(306, 34);
+            editorDeTextoToolStripMenuItem.Text = "Editor de Texto";
+            editorDeTextoToolStripMenuItem.Click += editorDeTextoToolStripMenuItem_Click;
+            // 
             // frmMenu
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -114,5 +122,6 @@
         private ToolStripMenuItem aplicacionSimpleToolStripMenuItem;
         private ToolStripMenuItem operaciones2NumerosToolStripMenuItem;
         private ToolStripMenuItem temporizadorToolStripMenuItem;
+        private ToolStripMenuItem editorDeTextoToolStripMenuItem;
     }
 }
