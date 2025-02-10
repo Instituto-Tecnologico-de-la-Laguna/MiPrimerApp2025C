@@ -34,6 +34,7 @@
             aplicaionSimpleToolStripMenuItem = new ToolStripMenuItem();
             operacionCon2ValoresToolStripMenuItem = new ToolStripMenuItem();
             TemporizadorToolStripMenuItem = new ToolStripMenuItem();
+            editorDeTextoToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -56,7 +57,7 @@
             // 
             // aplicacionesToolStripMenuItem
             // 
-            aplicacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { aplicaionSimpleToolStripMenuItem, operacionCon2ValoresToolStripMenuItem, TemporizadorToolStripMenuItem });
+            aplicacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { aplicaionSimpleToolStripMenuItem, operacionCon2ValoresToolStripMenuItem, TemporizadorToolStripMenuItem, editorDeTextoToolStripMenuItem });
             aplicacionesToolStripMenuItem.Name = "aplicacionesToolStripMenuItem";
             aplicacionesToolStripMenuItem.Size = new Size(126, 29);
             aplicacionesToolStripMenuItem.Text = "Aplicaciones";
@@ -80,7 +81,14 @@
             TemporizadorToolStripMenuItem.Name = "TemporizadorToolStripMenuItem";
             TemporizadorToolStripMenuItem.Size = new Size(306, 34);
             TemporizadorToolStripMenuItem.Text = "Temporizador";
-            TemporizadorToolStripMenuItem.Click += this.TemporizadorToolStripMenuItem_Click;
+            TemporizadorToolStripMenuItem.Click += TemporizadorToolStripMenuItem_Click;
+            // 
+            // editorDeTextoToolStripMenuItem
+            // 
+            editorDeTextoToolStripMenuItem.Name = "editorDeTextoToolStripMenuItem";
+            editorDeTextoToolStripMenuItem.Size = new Size(306, 34);
+            editorDeTextoToolStripMenuItem.Text = "Editor de texto";
+            editorDeTextoToolStripMenuItem.Click += editorDeTextoToolStripMenuItem_Click;
             // 
             // FrmMenu
             // 
@@ -105,5 +113,6 @@
         private ToolStripMenuItem aplicaionSimpleToolStripMenuItem;
         private ToolStripMenuItem operacionCon2ValoresToolStripMenuItem;
         private ToolStripMenuItem TemporizadorToolStripMenuItem;
+        private ToolStripMenuItem editorDeTextoToolStripMenuItem;
     }
 }
