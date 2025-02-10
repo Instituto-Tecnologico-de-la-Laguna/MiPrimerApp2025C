@@ -39,5 +39,11 @@ namespace MiPrimerApp2025C
             TNRReloj reloj = new TNRReloj();
             reloj.Show();
         }
+
+        private void archivoDeTextoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ArchivoToolStrip archivo = new ArchivoToolStrip();
+            archivo.Show();
+        }
     }
 }
