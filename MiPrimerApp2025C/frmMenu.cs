@@ -39,5 +39,11 @@ namespace MiPrimerApp2025C
             frmTemporizador temp = new frmTemporizador();
             temp.Show();
         }
+
+        private void editorDeTextoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmEditor editor = new frmEditor();
+            editor.Show();
+        }
     }
 }
