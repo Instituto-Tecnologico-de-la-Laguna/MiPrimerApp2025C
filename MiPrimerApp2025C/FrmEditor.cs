@@ -13,6 +13,9 @@ namespace MiPrimerApp2025C
 {
     public partial class FrmEditor : Form
     {
+        Boolean archivoGuardado = false;
+        string FilePath;
+
         public FrmEditor()
         {
             InitializeComponent();
@@ -30,25 +33,39 @@ namespace MiPrimerApp2025C
 
         private void gurardarComoToolStripMenuItem_Click(object sender, EventArgs e) // va en el guardar
         {
-            //SfdEditor.ShowDialog();
-            DialogResult resultado;
-            resultado = SfdEditor.ShowDialog();
-            if (resultado == DialogResult.OK)
+            DialogResult resultado;           
+            if (archivoGuardado == false)
             {
-                string FilePath = SfdEditor.FileName;
-                string texto = RtbEditor.Text;
+                resultado = SfdEditor.ShowDialog();
+                if (resultado == DialogResult.OK)
+                {
+                    FilePath = SfdEditor.FileName;
+                    string texto = RtbEditor.Text;
 
+                    try
+                    {
+                        File.WriteAllText(FilePath, texto);
+                        MessageBox.Show("Archivo guardado correctamente");
+                        archivoGuardado = true;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error al guardar el archivo " + ex.Message);
+                    }
+                }
+            } else
                 try
                 {
+                    string texto = RtbEditor.Text;
                     File.WriteAllText(FilePath, texto);
                     MessageBox.Show("Archivo guardado correctamente");
+                    archivoGuardado = true;
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Error al guardar el archivo " + ex.Message);
                 }
-            }
-
+            
         }
 
         private void guardarToolStripMenuItem_Click(object sender, EventArgs e)
@@ -63,6 +80,7 @@ namespace MiPrimerApp2025C
                 {
                     string texto = File.ReadAllText(FilePath);
                     RtbEditor.Text = texto;
+                    archivoGuardado = true;
                 }
                 catch (Exception ex)
                 {
