@@ -13,61 +13,29 @@ namespace MiPrimerApp2025C
 {
     public partial class frmEditor : Form
     {
-        bool archivoGuardado = false;
-        string filePath = null;
         public frmEditor()
         {
             InitializeComponent();
         }
 
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
         private void guardarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DialogResult resultado;
-            if (archivoGuardado)
+            resultado = saveFileDialogEditor.ShowDialog();
+            if (resultado == DialogResult.OK)
             {
-                resultado = saveFileDialogEditor.ShowDialog();
-                if (resultado == DialogResult.OK)
-                {
-                    filePath = saveFileDialogEditor.FileName;
-                    string texto = richTextBox1.Text;
-                    try
-                    {
-                        File.WriteAllText(filePath, texto);
-                        MessageBox.Show("Archivo guardado correctamente");
-                        archivoGuardado = true;
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Error al guardar el archivo: " + ex.Message);
-                    }
-
-                }
-            }
-            else
-            {
+                string filePath = saveFileDialogEditor.FileName;
+                string texto = rtbEditor.Text;
                 try
                 {
-                    string texto = richTextBox1.Text;
                     File.WriteAllText(filePath, texto);
                     MessageBox.Show("Archivo guardado correctamente");
-                    archivoGuardado = true;
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Error al guardar el archivo: " + ex.Message);
-
                 }
             }
-        }
-
-        private void openFileDialogEditor_FileOk(object sender, CancelEventArgs e)
-        {
-
         }
 
         private void abrirToolStripMenuItem_Click(object sender, EventArgs e)
@@ -76,18 +44,18 @@ namespace MiPrimerApp2025C
             resultado = openFileDialogEditor.ShowDialog();
             if (resultado == DialogResult.OK)
             {
-                filePath = saveFileDialogEditor.FileName;
+                string filePath = openFileDialogEditor.FileName;
                 try
                 {
                     string texto = File.ReadAllText(filePath);
-                    richTextBox1.Text = texto;
-                    archivoGuardado = true;
+                    rtbEditor.Text = texto;
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Error al abrir el archivo: " + ex.Message);
                 }
             }
+
         }
     }
 }

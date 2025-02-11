@@ -45,8 +45,7 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { archivoToolStripMenuItem, aplicacionesToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Padding = new Padding(5, 2, 0, 2);
-            menuStrip1.Size = new Size(640, 28);
+            menuStrip1.Size = new Size(800, 33);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -54,13 +53,13 @@
             // 
             archivoToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { salirToolStripMenuItem });
             archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
-            archivoToolStripMenuItem.Size = new Size(73, 24);
+            archivoToolStripMenuItem.Size = new Size(88, 29);
             archivoToolStripMenuItem.Text = "Archivo";
             // 
             // salirToolStripMenuItem
             // 
             salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            salirToolStripMenuItem.Size = new Size(224, 26);
+            salirToolStripMenuItem.Size = new Size(147, 34);
             salirToolStripMenuItem.Text = "Salir";
             salirToolStripMenuItem.Click += salirToolStripMenuItem_Click;
             // 
@@ -68,45 +67,44 @@
             // 
             aplicacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { aplicacionSimpleToolStripMenuItem, operacionesCon2ValoresToolStripMenuItem, temporizadorToolStripMenuItem, editorDeTextoToolStripMenuItem });
             aplicacionesToolStripMenuItem.Name = "aplicacionesToolStripMenuItem";
-            aplicacionesToolStripMenuItem.Size = new Size(107, 24);
+            aplicacionesToolStripMenuItem.Size = new Size(126, 29);
             aplicacionesToolStripMenuItem.Text = "Aplicaciones";
             // 
             // aplicacionSimpleToolStripMenuItem
             // 
             aplicacionSimpleToolStripMenuItem.Name = "aplicacionSimpleToolStripMenuItem";
-            aplicacionSimpleToolStripMenuItem.Size = new Size(267, 26);
+            aplicacionSimpleToolStripMenuItem.Size = new Size(324, 34);
             aplicacionSimpleToolStripMenuItem.Text = "Aplicacion Simple";
             aplicacionSimpleToolStripMenuItem.Click += aplicacionSimpleToolStripMenuItem_Click;
             // 
             // operacionesCon2ValoresToolStripMenuItem
             // 
             operacionesCon2ValoresToolStripMenuItem.Name = "operacionesCon2ValoresToolStripMenuItem";
-            operacionesCon2ValoresToolStripMenuItem.Size = new Size(267, 26);
+            operacionesCon2ValoresToolStripMenuItem.Size = new Size(324, 34);
             operacionesCon2ValoresToolStripMenuItem.Text = "Operaciones con 2 Valores";
             operacionesCon2ValoresToolStripMenuItem.Click += operacionesCon2ValoresToolStripMenuItem_Click;
             // 
             // temporizadorToolStripMenuItem
             // 
             temporizadorToolStripMenuItem.Name = "temporizadorToolStripMenuItem";
-            temporizadorToolStripMenuItem.Size = new Size(267, 26);
+            temporizadorToolStripMenuItem.Size = new Size(324, 34);
             temporizadorToolStripMenuItem.Text = "Temporizador";
             temporizadorToolStripMenuItem.Click += temporizadorToolStripMenuItem_Click;
             // 
             // editorDeTextoToolStripMenuItem
             // 
             editorDeTextoToolStripMenuItem.Name = "editorDeTextoToolStripMenuItem";
-            editorDeTextoToolStripMenuItem.Size = new Size(267, 26);
-            editorDeTextoToolStripMenuItem.Text = "Editor de texto";
+            editorDeTextoToolStripMenuItem.Size = new Size(324, 34);
+            editorDeTextoToolStripMenuItem.Text = "Editor de Texto";
             editorDeTextoToolStripMenuItem.Click += editorDeTextoToolStripMenuItem_Click;
             // 
             // frmMenu
             // 
-            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(640, 360);
+            ClientSize = new Size(800, 450);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
-            Margin = new Padding(2, 2, 2, 2);
             Name = "frmMenu";
             Text = "Menu de Aplicaciones en Clase";
             menuStrip1.ResumeLayout(false);

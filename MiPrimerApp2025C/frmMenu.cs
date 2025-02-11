@@ -42,7 +42,7 @@ namespace MiPrimerApp2025C
 
         private void editorDeTextoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            frmEditor ediTexto = new frmEditor();
+            frmEditor ediTexto= new frmEditor();
             ediTexto.Show();
         }
     }
