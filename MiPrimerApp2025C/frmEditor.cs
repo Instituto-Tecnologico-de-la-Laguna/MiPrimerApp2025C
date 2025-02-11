@@ -15,11 +15,12 @@ namespace MiPrimerApp2025C
     {
         bool archivoGuardado = false;
         string filePath = null;
+        //Se agrega
         public frmEditor()
         {
             InitializeComponent();
         }
-
+        
         private void guardarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DialogResult resultado;
@@ -38,7 +39,7 @@ namespace MiPrimerApp2025C
                     }
                     catch (Exception ex)
                     {
-                        MessageBox.Show("Error al guardar el archivo" + ex.Message);
+                        MessageBox.Show("Error al guardar el archivo: " + ex.Message);
                     }
                 }
             }
@@ -52,15 +53,9 @@ namespace MiPrimerApp2025C
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error al guardar el archivo" + ex.Message);
+                    MessageBox.Show("Error al guardar el archivo: " + ex.Message);
                 }
             }
-
-        }
-
-        private void archivoToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void abrirToolStripMenuItem_Click(object sender, EventArgs e)
@@ -72,21 +67,16 @@ namespace MiPrimerApp2025C
                 filePath = openFileDialogEditor.FileName;
                 try
                 {
-                    String texto = File.ReadAllText(filePath);
+                    string texto = File.ReadAllText(filePath);
                     rtbEditor.Text = texto;
-                    archivoGuardado=true;
+                    archivoGuardado = true;
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error al guardar el archivo" + ex.Message);
+                    MessageBox.Show("Error al abrir el archivo: " + ex.Message);
                 }
             }
-        }
 
-        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            DialogResult resultado;
-            resultado = .ShowDialog();
         }
     }
 }
