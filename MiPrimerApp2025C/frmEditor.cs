@@ -23,6 +23,7 @@ namespace MiPrimerApp2025C
         
         private void guardarToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            
             DialogResult resultado;
             if (archivoGuardado == false)
             {
