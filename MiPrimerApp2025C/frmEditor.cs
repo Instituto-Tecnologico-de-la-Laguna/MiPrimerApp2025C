@@ -13,21 +13,41 @@ namespace MiPrimerApp2025C
 {
     public partial class frmEditor : Form
     {
+        bool archivoGuardado = false;
+        string filePath = null;
+        //Se agrega
         public frmEditor()
         {
             InitializeComponent();
         }
-
+        
         private void guardarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DialogResult resultado;
-            resultado = saveFileDialogEditor.ShowDialog();
-            if (resultado == DialogResult.OK)
+            if (archivoGuardado == false)
             {
-                string filePath = saveFileDialogEditor.FileName;
-                string texto = rtbEditor.Text;
+                resultado = saveFileDialogEditor.ShowDialog();
+                if (resultado == DialogResult.OK)
+                {
+                    filePath = saveFileDialogEditor.FileName;
+                    string texto = rtbEditor.Text;
+                    try
+                    {
+                        File.WriteAllText(filePath, texto);
+                        MessageBox.Show("Archivo guardado correctamente");
+                        archivoGuardado = true;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error al guardar el archivo: " + ex.Message);
+                    }
+                }
+            }
+            else
+            {
                 try
                 {
+                    string texto = rtbEditor.Text;
                     File.WriteAllText(filePath, texto);
                     MessageBox.Show("Archivo guardado correctamente");
                 }
@@ -44,11 +64,12 @@ namespace MiPrimerApp2025C
             resultado = openFileDialogEditor.ShowDialog();
             if (resultado == DialogResult.OK)
             {
-                string filePath = openFileDialogEditor.FileName;
+                filePath = openFileDialogEditor.FileName;
                 try
                 {
                     string texto = File.ReadAllText(filePath);
                     rtbEditor.Text = texto;
+                    archivoGuardado = true;
                 }
                 catch (Exception ex)
                 {
