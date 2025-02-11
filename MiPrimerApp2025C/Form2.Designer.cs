@@ -33,6 +33,8 @@
             aplicacionesToolStripMenuItem = new ToolStripMenuItem();
             appSimpleToolStripMenuItem = new ToolStripMenuItem();
             operacionesToolStripMenuItem = new ToolStripMenuItem();
+            relojToolStripMenuItem = new ToolStripMenuItem();
+            editorDeTextoToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -55,7 +57,7 @@
             // 
             // aplicacionesToolStripMenuItem
             // 
-            aplicacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { appSimpleToolStripMenuItem, operacionesToolStripMenuItem });
+            aplicacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { appSimpleToolStripMenuItem, operacionesToolStripMenuItem, relojToolStripMenuItem, editorDeTextoToolStripMenuItem });
             aplicacionesToolStripMenuItem.Name = "aplicacionesToolStripMenuItem";
             aplicacionesToolStripMenuItem.Size = new Size(107, 24);
             aplicacionesToolStripMenuItem.Text = "Aplicaciones";
@@ -73,6 +75,20 @@
             operacionesToolStripMenuItem.Size = new Size(224, 26);
             operacionesToolStripMenuItem.Text = "Operaciones";
             operacionesToolStripMenuItem.Click += operacionesToolStripMenuItem_Click;
+            // 
+            // relojToolStripMenuItem
+            // 
+            relojToolStripMenuItem.Name = "relojToolStripMenuItem";
+            relojToolStripMenuItem.Size = new Size(224, 26);
+            relojToolStripMenuItem.Text = "Reloj";
+            relojToolStripMenuItem.Click += relojToolStripMenuItem_Click;
+            // 
+            // editorDeTextoToolStripMenuItem
+            // 
+            editorDeTextoToolStripMenuItem.Name = "editorDeTextoToolStripMenuItem";
+            editorDeTextoToolStripMenuItem.Size = new Size(224, 26);
+            editorDeTextoToolStripMenuItem.Text = "Editor de texto";
+            editorDeTextoToolStripMenuItem.Click += editorDeTextoToolStripMenuItem_Click;
             // 
             // Form2
             // 
@@ -97,5 +113,7 @@
         private ToolStripMenuItem aplicacionesToolStripMenuItem;
         private ToolStripMenuItem appSimpleToolStripMenuItem;
         private ToolStripMenuItem operacionesToolStripMenuItem;
+        private ToolStripMenuItem relojToolStripMenuItem;
+        private ToolStripMenuItem editorDeTextoToolStripMenuItem;
     }
 }

@@ -38,5 +38,18 @@ namespace MiPrimerApp2025C
             Form3 operaciones = new Form3();
             operaciones.Show();
         }
+
+        private void relojToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormTemporizador reloj = new FormTemporizador();
+            reloj.Show();
+        }
+
+        private void editorDeTextoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Form4 Editor = new Form4();
+            Editor.Show();
+
+        }
     }
 }
