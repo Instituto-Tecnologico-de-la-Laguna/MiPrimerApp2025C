@@ -13,6 +13,8 @@ namespace MiPrimerApp2025C
 {
     public partial class frmEditor : Form
     {
+        bool archivoGuardado = false;
+        string filePath = null;
         public frmEditor()
         {
             InitializeComponent();
@@ -26,22 +28,41 @@ namespace MiPrimerApp2025C
         private void guardarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DialogResult resultado;
-            resultado = saveFileDialogEditor.ShowDialog();
-            if (resultado == DialogResult.OK)
+            if (archivoGuardado)
             {
-                string filePath = saveFileDialogEditor.FileName;
-                string texto = richTextBox1.Text;
+                resultado = saveFileDialogEditor.ShowDialog();
+                if (resultado == DialogResult.OK)
+                {
+                    filePath = saveFileDialogEditor.FileName;
+                    string texto = richTextBox1.Text;
+                    try
+                    {
+                        File.WriteAllText(filePath, texto);
+                        MessageBox.Show("Archivo guardado correctamente");
+                        archivoGuardado = true;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error al guardar el archivo: " + ex.Message);
+                    }
+
+                }
+            }
+            else
+            {
                 try
                 {
+                    string texto = richTextBox1.Text;
                     File.WriteAllText(filePath, texto);
+                    MessageBox.Show("Archivo guardado correctamente");
+                    archivoGuardado = true;
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Error al guardar el archivo: " + ex.Message);
+
                 }
-
             }
-
         }
 
         private void openFileDialogEditor_FileOk(object sender, CancelEventArgs e)
@@ -55,11 +76,12 @@ namespace MiPrimerApp2025C
             resultado = openFileDialogEditor.ShowDialog();
             if (resultado == DialogResult.OK)
             {
-                string filePath = saveFileDialogEditor.FileName;
+                filePath = saveFileDialogEditor.FileName;
                 try
                 {
                     string texto = File.ReadAllText(filePath);
                     richTextBox1.Text = texto;
+                    archivoGuardado = true;
                 }
                 catch (Exception ex)
                 {
