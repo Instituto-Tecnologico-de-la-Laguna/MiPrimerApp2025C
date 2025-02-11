@@ -12,6 +12,8 @@ namespace MiPrimerApp2025C
 {
     public partial class frmEditor : Form
     {
+        bool archivoGuardado = false;
+        string filePatch = null;
         public frmEditor()
         {
             InitializeComponent();
@@ -20,13 +22,32 @@ namespace MiPrimerApp2025C
         private void guardarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DialogResult resultado;
-            resultado = saveFileDialogEditor.ShowDialog();
-            if (resultado == DialogResult.OK)
+            if (archivoGuardado==false)
             {
-                string filePatch = saveFileDialogEditor.FileName;
-                String texto = rtbEditor.Text;
+
+                resultado = saveFileDialogEditor.ShowDialog();
+
+                if (resultado == DialogResult.OK)
+                {
+                    filePatch = saveFileDialogEditor.FileName;
+                    String texto = rtbEditor.Text;
+                    try
+                    {
+                        File.WriteAllText(filePatch, texto);
+                        MessageBox.Show("El archivo se guardo correctamente");
+                        archivoGuardado = true;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error al guardar el archivo" + ex.Message);
+                    }
+                }
+            }
+            else
+            {
                 try
                 {
+                    string texto = rtbEditor.Text;
                     File.WriteAllText(filePatch, texto);
                     MessageBox.Show("El archivo se guardo correctamente");
                 }
@@ -45,8 +66,9 @@ namespace MiPrimerApp2025C
         private void abrirToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DialogResult resultado;
-            resultado = openFileDialogEditor.ShowDialog();
 
+            resultado = openFileDialogEditor.ShowDialog();
+            
             if (resultado == DialogResult.OK)
             {
                 string filePatch = openFileDialogEditor.FileName;
@@ -54,6 +76,7 @@ namespace MiPrimerApp2025C
                 {
                     string texto =File.ReadAllText(filePatch);
                     rtbEditor.Text = texto;
+                    archivoGuardado = true;
                     
                 }
                 catch (Exception ex)
