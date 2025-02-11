@@ -28,5 +28,11 @@ namespace MiPrimerApp2025C
             frmTemporizador Reloj = new frmTemporizador();
             Reloj.Show();
         }
+
+        private void editorDeTextoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmEditor Editor = new FrmEditor();
+            Editor.Show();
+        }
     }
 }

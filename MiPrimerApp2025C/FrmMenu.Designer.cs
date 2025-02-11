@@ -36,6 +36,7 @@ namespace MiPrimerApp2025C
             aplicaciónSimpleToolStripMenuItem = new ToolStripMenuItem();
             operacionesDe2ValoresToolStripMenuItem = new ToolStripMenuItem();
             temporizadorToolStripMenuItem = new ToolStripMenuItem();
+            editorDeTextoToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -58,13 +59,13 @@ namespace MiPrimerApp2025C
             // salirToolStripMenuItem
             // 
             salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            salirToolStripMenuItem.Size = new Size(96, 22);
+            salirToolStripMenuItem.Size = new Size(180, 22);
             salirToolStripMenuItem.Text = "Salir";
             salirToolStripMenuItem.Click += salirToolStripMenuItem_Click;
             // 
             // aplicacionesToolStripMenuItem
             // 
-            aplicacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { aplicaciónSimpleToolStripMenuItem, operacionesDe2ValoresToolStripMenuItem, temporizadorToolStripMenuItem });
+            aplicacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { aplicaciónSimpleToolStripMenuItem, operacionesDe2ValoresToolStripMenuItem, temporizadorToolStripMenuItem, editorDeTextoToolStripMenuItem });
             aplicacionesToolStripMenuItem.Name = "aplicacionesToolStripMenuItem";
             aplicacionesToolStripMenuItem.Size = new Size(86, 20);
             aplicacionesToolStripMenuItem.Text = "Aplicaciones";
@@ -90,6 +91,13 @@ namespace MiPrimerApp2025C
             temporizadorToolStripMenuItem.Size = new Size(205, 22);
             temporizadorToolStripMenuItem.Text = "Temporizador";
             temporizadorToolStripMenuItem.Click += temporizadorToolStripMenuItem_Click;
+            // 
+            // editorDeTextoToolStripMenuItem
+            // 
+            editorDeTextoToolStripMenuItem.Name = "editorDeTextoToolStripMenuItem";
+            editorDeTextoToolStripMenuItem.Size = new Size(205, 22);
+            editorDeTextoToolStripMenuItem.Text = "Editor de texto";
+            editorDeTextoToolStripMenuItem.Click += editorDeTextoToolStripMenuItem_Click;
             // 
             // FrmMenu
             // 
@@ -132,5 +140,6 @@ namespace MiPrimerApp2025C
         private ToolStripMenuItem aplicaciónSimpleToolStripMenuItem;
         private ToolStripMenuItem operacionesDe2ValoresToolStripMenuItem;
         private ToolStripMenuItem temporizadorToolStripMenuItem;
+        private ToolStripMenuItem editorDeTextoToolStripMenuItem;
     }
 }
