@@ -20,7 +20,7 @@ namespace MiPrimerApp2025C
         {
             InitializeComponent();
         }
-        
+
         private void guardarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DialogResult resultado;
@@ -77,6 +77,15 @@ namespace MiPrimerApp2025C
                 }
             }
 
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult res= MessageBox .Show("Deseas salir?","Sistema",MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (res == DialogResult.OK)
+            {
+                this.Close();
+            }
         }
     }
 }
