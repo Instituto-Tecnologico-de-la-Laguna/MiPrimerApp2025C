@@ -1,8 +1,8 @@
 namespace MiPrimerApp2025C
 {
-    public partial class Form1 : Form
+    public partial class FormAppSimple : Form
     {
-        public Form1()
+        public FormAppSimple()
         {
             InitializeComponent();
         }

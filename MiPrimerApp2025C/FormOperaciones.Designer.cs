@@ -1,6 +1,6 @@
 ﻿namespace MiPrimerApp2025C
 {
-    partial class Form3
+    partial class FormOperaciones
     {
         /// <summary>
         /// Required designer variable.

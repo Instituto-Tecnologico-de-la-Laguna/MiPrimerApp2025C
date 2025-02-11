@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MiPrimerApp2025C
 {
-    public partial class Form3 : Form
+    public partial class FormOperaciones : Form
     {
-        public Form3()
+        public FormOperaciones()
         {
             InitializeComponent();
         }

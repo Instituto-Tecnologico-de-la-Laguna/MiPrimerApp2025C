@@ -11,9 +11,11 @@ using System.IO;
 
 namespace MiPrimerApp2025C
 {
-    public partial class Form4 : Form
+    public partial class FormEditor : Form
     {
-        public Form4()
+        string filePath;
+        bool archivoGuardado = false;
+        public FormEditor()
         {
             InitializeComponent();
         }
@@ -21,14 +23,32 @@ namespace MiPrimerApp2025C
         private void guardarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DialogResult resultado;
-            resultado = saveFileDialog1.ShowDialog();
-            if (resultado == DialogResult.OK)
+            if (archivoGuardado == false)
             {
-                string filePath = saveFileDialog1.FileName;
-                string texto = rtb.Text;
+                resultado = saveFileDialog1.ShowDialog();
+                if (resultado == DialogResult.OK)
+                {
+                    filePath = saveFileDialog1.FileName;
+                    string texto = rtb.Text;
+                    try
+                    {
+                        File.WriteAllText(filePath, texto);
+                        MessageBox.Show("Archivo guardado exitosamente");
+                        archivoGuardado = true;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error al guardar" + ex.Message);
+                    }
+                }
+            }
+            else
+            {
                 try
                 {
+                    string texto = rtb.Text;
                     File.WriteAllText(filePath, texto);
+                    MessageBox.Show("Archivo guardado exitosamente");
                 }
                 catch (Exception ex)
                 {
@@ -48,11 +68,12 @@ namespace MiPrimerApp2025C
             resultado = openFileDialog1.ShowDialog();
             if (resultado == DialogResult.OK)
             {
-                string filePath = openFileDialog1.FileName;
+                filePath = openFileDialog1.FileName;
                 try
                 {
                     string texto = File.ReadAllText(filePath);
                     rtb.Text = texto;
+                    archivoGuardado = true;
                 }
                 catch (Exception ex)
                 {

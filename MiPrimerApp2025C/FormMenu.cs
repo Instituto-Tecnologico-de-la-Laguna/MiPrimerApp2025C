@@ -10,9 +10,9 @@ using System.Windows.Forms;
 
 namespace MiPrimerApp2025C
 {
-    public partial class Form2 : Form
+    public partial class FormMenu : Form
     {
-        public Form2()
+        public FormMenu()
         {
             InitializeComponent();
         }
@@ -24,7 +24,7 @@ namespace MiPrimerApp2025C
 
         private void appSimpleToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form1 nombre = new Form1();
+            FormAppSimple nombre = new FormAppSimple();
             nombre.Show();
         }
 
@@ -35,7 +35,7 @@ namespace MiPrimerApp2025C
 
         private void operacionesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form3 operaciones = new Form3();
+            FormOperaciones operaciones = new FormOperaciones();
             operaciones.Show();
         }
 
@@ -47,7 +47,7 @@ namespace MiPrimerApp2025C
 
         private void editorDeTextoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Form4 Editor = new Form4();
+            FormEditor Editor = new FormEditor();
             Editor.Show();
 
         }
