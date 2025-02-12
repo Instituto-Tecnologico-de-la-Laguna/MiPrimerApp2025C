@@ -20,7 +20,7 @@ namespace MiPrimerApp2025C
         {
             InitializeComponent();
         }
-        
+
         private void guardarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DialogResult resultado;
@@ -77,6 +77,53 @@ namespace MiPrimerApp2025C
                 }
             }
 
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult res = MessageBox.Show("Deseas salir?", "Sistema", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (res == DialogResult.OK)
+            {
+                guardarToolStripMenuItem_Click(sender, e);
+            }
+            else if (res == DialogResult.Cancel)
+            {
+                this.Close();
+            }
+        }
+
+        private void guardarComoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult resultado = saveFileDialogEditor.ShowDialog();
+            if (resultado == DialogResult.OK)
+            {
+                filePath = saveFileDialogEditor.FileName;
+                string texto = rtbEditor.Text;
+                try
+                {
+                    File.WriteAllText(filePath, texto);
+                    MessageBox.Show("Archivo guardado correctamente");
+                    archivoGuardado = true;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al guardar el archivo: " + ex.Message);
+                }
+            }
+        }
+
+        private void nuevoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult res = MessageBox.Show("Desea una nueva hoja de texto?", "Sistema", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (res == DialogResult.Yes)
+            {
+                rtbEditor.Text = "";
+                archivoGuardado = false;
+            }
+            else if (res == DialogResult.No)
+            {
+                return;
+            }
         }
     }
 }
