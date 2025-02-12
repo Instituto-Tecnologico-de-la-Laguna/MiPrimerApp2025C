@@ -37,6 +37,7 @@
             temporizadorToolStripMenuItem = new ToolStripMenuItem();
             editorDeTextoToolStripMenuItem = new ToolStripMenuItem();
             temporizador2ToolStripMenuItem = new ToolStripMenuItem();
+            dataGridToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -66,7 +67,7 @@
             // 
             // aplicacionesToolStripMenuItem
             // 
-            aplicacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { aplicacionSimpleToolStripMenuItem, operacionesCon2ValoresToolStripMenuItem, temporizadorToolStripMenuItem, editorDeTextoToolStripMenuItem, temporizador2ToolStripMenuItem });
+            aplicacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { aplicacionSimpleToolStripMenuItem, operacionesCon2ValoresToolStripMenuItem, temporizadorToolStripMenuItem, editorDeTextoToolStripMenuItem, temporizador2ToolStripMenuItem, dataGridToolStripMenuItem });
             aplicacionesToolStripMenuItem.Name = "aplicacionesToolStripMenuItem";
             aplicacionesToolStripMenuItem.Size = new Size(126, 29);
             aplicacionesToolStripMenuItem.Text = "Aplicaciones";
@@ -106,6 +107,13 @@
             temporizador2ToolStripMenuItem.Text = "Temporizador 2";
             temporizador2ToolStripMenuItem.Click += temporizador2ToolStripMenuItem_Click;
             // 
+            // dataGridToolStripMenuItem
+            // 
+            dataGridToolStripMenuItem.Name = "dataGridToolStripMenuItem";
+            dataGridToolStripMenuItem.Size = new Size(324, 34);
+            dataGridToolStripMenuItem.Text = "DataGrid";
+            dataGridToolStripMenuItem.Click += dataGridToolStripMenuItem_Click;
+            // 
             // frmMenu
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -132,5 +140,6 @@
         private ToolStripMenuItem temporizadorToolStripMenuItem;
         private ToolStripMenuItem editorDeTextoToolStripMenuItem;
         private ToolStripMenuItem temporizador2ToolStripMenuItem;
+        private ToolStripMenuItem dataGridToolStripMenuItem;
     }
 }
