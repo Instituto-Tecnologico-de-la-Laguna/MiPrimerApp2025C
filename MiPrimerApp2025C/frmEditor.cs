@@ -9,9 +9,12 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO; //libreira agg
 namespace MiPrimerApp2025C
+   
 {
     public partial class frmEditor : Form
     {
+       // DialogResult res =MessageBox.Show("deseas salir?","sistemas",MessageBoxButtons.YesNoCancel,MessageBoxIcon.Question);
+
         bool archivoGuardado = false;
         string filePatch = null;
         public frmEditor()
