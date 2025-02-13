@@ -37,6 +37,8 @@ namespace MiPrimerApp2025C
             operacionesDe2ValoresToolStripMenuItem = new ToolStripMenuItem();
             temporizadorToolStripMenuItem = new ToolStripMenuItem();
             editorDeTextoToolStripMenuItem = new ToolStripMenuItem();
+            temporizador2ToolStripMenuItem = new ToolStripMenuItem();
+            dataGridToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -45,7 +47,7 @@ namespace MiPrimerApp2025C
             menuStrip1.Items.AddRange(new ToolStripItem[] { archivoToolStripMenuItem, aplicacionesToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(483, 24);
+            menuStrip1.Size = new Size(322, 24);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -59,13 +61,13 @@ namespace MiPrimerApp2025C
             // salirToolStripMenuItem
             // 
             salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            salirToolStripMenuItem.Size = new Size(180, 22);
+            salirToolStripMenuItem.Size = new Size(96, 22);
             salirToolStripMenuItem.Text = "Salir";
             salirToolStripMenuItem.Click += salirToolStripMenuItem_Click;
             // 
             // aplicacionesToolStripMenuItem
             // 
-            aplicacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { aplicaciónSimpleToolStripMenuItem, operacionesDe2ValoresToolStripMenuItem, temporizadorToolStripMenuItem, editorDeTextoToolStripMenuItem });
+            aplicacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { aplicaciónSimpleToolStripMenuItem, operacionesDe2ValoresToolStripMenuItem, temporizadorToolStripMenuItem, editorDeTextoToolStripMenuItem, temporizador2ToolStripMenuItem, dataGridToolStripMenuItem });
             aplicacionesToolStripMenuItem.Name = "aplicacionesToolStripMenuItem";
             aplicacionesToolStripMenuItem.Size = new Size(86, 20);
             aplicacionesToolStripMenuItem.Text = "Aplicaciones";
@@ -99,11 +101,25 @@ namespace MiPrimerApp2025C
             editorDeTextoToolStripMenuItem.Text = "Editor de texto";
             editorDeTextoToolStripMenuItem.Click += editorDeTextoToolStripMenuItem_Click;
             // 
+            // temporizador2ToolStripMenuItem
+            // 
+            temporizador2ToolStripMenuItem.Name = "temporizador2ToolStripMenuItem";
+            temporizador2ToolStripMenuItem.Size = new Size(205, 22);
+            temporizador2ToolStripMenuItem.Text = "Temporizador 2";
+            temporizador2ToolStripMenuItem.Click += temporizador2ToolStripMenuItem_Click;
+            // 
+            // dataGridToolStripMenuItem
+            // 
+            dataGridToolStripMenuItem.Name = "dataGridToolStripMenuItem";
+            dataGridToolStripMenuItem.Size = new Size(205, 22);
+            dataGridToolStripMenuItem.Text = "Data Grid";
+            dataGridToolStripMenuItem.Click += dataGridToolStripMenuItem_Click;
+            // 
             // FrmMenu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(483, 426);
+            ClientSize = new Size(322, 202);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
             Name = "FrmMenu";
@@ -141,5 +157,7 @@ namespace MiPrimerApp2025C
         private ToolStripMenuItem operacionesDe2ValoresToolStripMenuItem;
         private ToolStripMenuItem temporizadorToolStripMenuItem;
         private ToolStripMenuItem editorDeTextoToolStripMenuItem;
+        private ToolStripMenuItem temporizador2ToolStripMenuItem;
+        private ToolStripMenuItem dataGridToolStripMenuItem;
     }
 }
