@@ -46,9 +46,21 @@ namespace MiPrimerApp2025C
 
         private void editorDeTextoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-           FmrEditorcs editor = new FmrEditorcs();
+            FmrEditorcs editor = new FmrEditorcs();
             editor.Show();
-            
+
+        }
+
+        private void temporizador2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmTemporizador2 temporizador2 = new FrmTemporizador2();
+            temporizador2.Show();
+        }
+
+        private void dataGridViewToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDataGrid dataGridView = new frmDataGrid();
+            dataGridView.Show();    
         }
     }
 }

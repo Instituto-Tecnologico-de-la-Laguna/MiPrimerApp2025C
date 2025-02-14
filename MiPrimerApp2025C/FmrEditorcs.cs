@@ -34,6 +34,7 @@ namespace MiPrimerApp2025C
                 resultado = saveFileDialogEditor.ShowDialog();
                 if (resultado == DialogResult.OK)
                 {
+
                     filePath = saveFileDialogEditor.FileName;
                     string texto = rtbEditor.Text;
                     try
@@ -70,7 +71,7 @@ namespace MiPrimerApp2025C
             resultado = openFileDialogEditor.ShowDialog();
             if (resultado == DialogResult.OK)
             {
-                 filePath = openFileDialogEditor.FileName;
+                filePath = openFileDialogEditor.FileName;
                 try
                 {
                     string texto = File.ReadAllText(filePath);
@@ -83,6 +84,11 @@ namespace MiPrimerApp2025C
                 }
 
             }
+        }
+
+        private void nuevoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            rtbEditor.Clear();
         }
     }
 }
