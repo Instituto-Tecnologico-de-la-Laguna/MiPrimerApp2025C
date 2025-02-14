@@ -38,13 +38,13 @@
             editarToolStripMenuItem = new ToolStripMenuItem();
             fuenteToolStripMenuItem = new ToolStripMenuItem();
             colorToolStripMenuItem = new ToolStripMenuItem();
+            herramientasToolStripMenuItem = new ToolStripMenuItem();
+            contarLetrasToolStripMenuItem = new ToolStripMenuItem();
             rtbEditor = new RichTextBox();
             openFileDialogEditor = new OpenFileDialog();
             saveFileDialogEditor = new SaveFileDialog();
             fontDialogEditor = new FontDialog();
             colorDialogEditor = new ColorDialog();
-            herramientasToolStripMenuItem = new ToolStripMenuItem();
-            contarLetrasToolStripMenuItem = new ToolStripMenuItem();
             menuEditor.SuspendLayout();
             SuspendLayout();
             // 
@@ -54,7 +54,7 @@
             menuEditor.Items.AddRange(new ToolStripItem[] { archivoToolStripMenuItem, editarToolStripMenuItem, herramientasToolStripMenuItem });
             menuEditor.Location = new Point(0, 0);
             menuEditor.Name = "menuEditor";
-            menuEditor.Size = new Size(800, 33);
+            menuEditor.Size = new Size(805, 33);
             menuEditor.TabIndex = 0;
             menuEditor.Text = "menuStrip1";
             // 
@@ -119,23 +119,6 @@
             colorToolStripMenuItem.Text = "Color";
             colorToolStripMenuItem.Click += colorToolStripMenuItem_Click;
             // 
-            // rtbEditor
-            // 
-            rtbEditor.Dock = DockStyle.Fill;
-            rtbEditor.Location = new Point(0, 33);
-            rtbEditor.Name = "rtbEditor";
-            rtbEditor.Size = new Size(800, 417);
-            rtbEditor.TabIndex = 1;
-            rtbEditor.Text = "";
-            // 
-            // openFileDialogEditor
-            // 
-            openFileDialogEditor.Filter = "Archivo de Texto|*.txt";
-            // 
-            // saveFileDialogEditor
-            // 
-            saveFileDialogEditor.Filter = "Archivo de Texto|*.txt";
-            // 
             // herramientasToolStripMenuItem
             // 
             herramientasToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { contarLetrasToolStripMenuItem });
@@ -150,11 +133,28 @@
             contarLetrasToolStripMenuItem.Text = "Contar letras";
             contarLetrasToolStripMenuItem.Click += contarLetrasToolStripMenuItem_Click;
             // 
+            // rtbEditor
+            // 
+            rtbEditor.Dock = DockStyle.Fill;
+            rtbEditor.Location = new Point(0, 33);
+            rtbEditor.Name = "rtbEditor";
+            rtbEditor.Size = new Size(805, 417);
+            rtbEditor.TabIndex = 1;
+            rtbEditor.Text = "";
+            // 
+            // openFileDialogEditor
+            // 
+            openFileDialogEditor.Filter = "Archivo de Texto|*.txt";
+            // 
+            // saveFileDialogEditor
+            // 
+            saveFileDialogEditor.Filter = "Archivo de Texto|*.txt";
+            // 
             // frmEditor
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(805, 450);
             Controls.Add(rtbEditor);
             Controls.Add(menuEditor);
             MainMenuStrip = menuEditor;
