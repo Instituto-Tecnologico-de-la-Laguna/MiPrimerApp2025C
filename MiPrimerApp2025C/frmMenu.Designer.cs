@@ -112,6 +112,7 @@
             temporizadorToolStripMenuItem1.Name = "temporizadorToolStripMenuItem1";
             temporizadorToolStripMenuItem1.Size = new Size(306, 34);
             temporizadorToolStripMenuItem1.Text = "ShowGrid";
+            temporizadorToolStripMenuItem1.Click += temporizadorToolStripMenuItem1_Click;
             // 
             // frmMenu
             // 

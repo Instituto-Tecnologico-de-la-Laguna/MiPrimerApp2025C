@@ -51,5 +51,11 @@ namespace MiPrimerApp2025C
             frmTemporizador2 temp2 = new frmTemporizador2();
             temp2.Show();
         }
+
+        private void temporizadorToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            frmDataGrid grid = new frmDataGrid();   
+            grid.Show();
+        }
     }
 }
