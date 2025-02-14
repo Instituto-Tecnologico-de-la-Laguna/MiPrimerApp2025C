@@ -16,5 +16,32 @@ namespace MiPrimerApp2025C
         {
             InitializeComponent();
         }
+
+        private void btnGuardar_Click(object sender, EventArgs e)
+        {
+            DialogResult result = saveFileDialogDataGrid.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                string filename = saveFileDialogDataGrid.FileName;
+                int total = dgvDatos.Rows.Count - 1;
+                string[] lineas = new string[total];
+                for (int i = 0; i < total; i++)
+                {
+                    string linea = "";
+                    for (int j = 0; j < dgvDatos.Columns.Count; j++)
+                    {
+                        if(j == dgvDatos.Rows[i].Cells.Count - 1)
+                        {
+                            linea += dgvDatos.Rows[i].Cells[j].Value.ToString() + "";
+                        }
+                        else
+                        {
+                            linea += dgvDatos.Rows[i].Cells[j].Value.ToString() + ", ";
+                        }
+                    }
+                    lineas[i] = linea;
+                }
+            }
+        }
     }
 }
