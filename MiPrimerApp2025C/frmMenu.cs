@@ -33,5 +33,11 @@ namespace MiPrimerApp2025C
             Form1 AppSimple = new Form1();
             AppSimple.Show();
         }
+
+        private void temporizadorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTemporizador temporizador = new frmTemporizador();
+            temporizador.Show();
+        }
     }
 }
