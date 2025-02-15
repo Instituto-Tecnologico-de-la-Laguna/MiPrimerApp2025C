@@ -28,7 +28,22 @@ namespace MiPrimerApp2025C
 
         private void nuevoToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (!archivoGuardado)
+            {
+                DialogResult result = MessageBox.Show("¿Desea guardar los cambios?", "Confirmar", MessageBoxButtons.YesNoCancel);
+                if (result == DialogResult.Yes)
+                {
+                    guardarToolStripMenuItem_Click(sender, e);
+                }
+                else if (result == DialogResult.Cancel)
+                {
+                    return;
+                }
+            }
 
+            rtbEditor.Clear();
+            filePath = string.Empty;
+            archivoGuardado = false;
         }
 
         private void abrirToolStripMenuItem_Click_1(object sender, EventArgs e)
@@ -90,12 +105,32 @@ namespace MiPrimerApp2025C
 
         private void guardarComoToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            saveFileDialogEditor.FileName = "";
+            DialogResult resultado = saveFileDialogEditor.ShowDialog();
+            if (resultado == DialogResult.OK)
+            {
+                filePath = saveFileDialogEditor.FileName;
+                try
+                {
+                    File.WriteAllText(filePath, rtbEditor.Text);
+                    MessageBox.Show("Archivo guardado correctamente");
+                    archivoGuardado = true;
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al guardar el archivo: " + ex.Message);
+                }
+            }
 
         }
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            DialogResult res = MessageBox.Show("Deseas salir?", "Sistema", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (res == DialogResult.OK)
+            {
+                this.Close();
+            }
         }
     }
 }
