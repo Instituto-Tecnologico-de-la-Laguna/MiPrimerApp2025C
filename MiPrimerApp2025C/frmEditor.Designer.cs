@@ -35,16 +35,23 @@
             guardarToolStripMenuItem = new ToolStripMenuItem();
             guardarComoToolStripMenuItem = new ToolStripMenuItem();
             salirToolStripMenuItem = new ToolStripMenuItem();
+            editarToolStripMenuItem = new ToolStripMenuItem();
+            fuenteToolStripMenuItem = new ToolStripMenuItem();
+            colorToolStripMenuItem = new ToolStripMenuItem();
+            herramientasToolStripMenuItem = new ToolStripMenuItem();
+            contarLetrasToolStripMenuItem = new ToolStripMenuItem();
             rtbEditor = new RichTextBox();
             saveFileDialogEditor = new SaveFileDialog();
             openFileDialogEditor = new OpenFileDialog();
+            fontDialogEditor = new FontDialog();
+            colorDialogEditor = new ColorDialog();
             menuEditor.SuspendLayout();
             SuspendLayout();
             // 
             // menuEditor
             // 
             menuEditor.ImageScalingSize = new Size(20, 20);
-            menuEditor.Items.AddRange(new ToolStripItem[] { archivoToolStripMenuItem });
+            menuEditor.Items.AddRange(new ToolStripItem[] { archivoToolStripMenuItem, editarToolStripMenuItem, herramientasToolStripMenuItem });
             menuEditor.Location = new Point(0, 0);
             menuEditor.Name = "menuEditor";
             menuEditor.Size = new Size(800, 28);
@@ -93,6 +100,41 @@
             salirToolStripMenuItem.Text = "Salir";
             salirToolStripMenuItem.Click += salirToolStripMenuItem_Click;
             // 
+            // editarToolStripMenuItem
+            // 
+            editarToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { fuenteToolStripMenuItem, colorToolStripMenuItem });
+            editarToolStripMenuItem.Name = "editarToolStripMenuItem";
+            editarToolStripMenuItem.Size = new Size(62, 24);
+            editarToolStripMenuItem.Text = "Editar";
+            // 
+            // fuenteToolStripMenuItem
+            // 
+            fuenteToolStripMenuItem.Name = "fuenteToolStripMenuItem";
+            fuenteToolStripMenuItem.Size = new Size(136, 26);
+            fuenteToolStripMenuItem.Text = "Fuente";
+            fuenteToolStripMenuItem.Click += fuenteToolStripMenuItem_Click;
+            // 
+            // colorToolStripMenuItem
+            // 
+            colorToolStripMenuItem.Name = "colorToolStripMenuItem";
+            colorToolStripMenuItem.Size = new Size(136, 26);
+            colorToolStripMenuItem.Text = "Color";
+            colorToolStripMenuItem.Click += colorToolStripMenuItem_Click;
+            // 
+            // herramientasToolStripMenuItem
+            // 
+            herramientasToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { contarLetrasToolStripMenuItem });
+            herramientasToolStripMenuItem.Name = "herramientasToolStripMenuItem";
+            herramientasToolStripMenuItem.Size = new Size(112, 24);
+            herramientasToolStripMenuItem.Text = "Herramientas";
+            // 
+            // contarLetrasToolStripMenuItem
+            // 
+            contarLetrasToolStripMenuItem.Name = "contarLetrasToolStripMenuItem";
+            contarLetrasToolStripMenuItem.Size = new Size(224, 26);
+            contarLetrasToolStripMenuItem.Text = "Contar Letras";
+            contarLetrasToolStripMenuItem.Click += contarLetrasToolStripMenuItem_Click;
+            // 
             // rtbEditor
             // 
             rtbEditor.Dock = DockStyle.Fill;
@@ -121,7 +163,7 @@
             Controls.Add(menuEditor);
             MainMenuStrip = menuEditor;
             Name = "frmEditor";
-            Text = "frmEditor";
+            Text = "Editor de Texto";
             Load += frmEditor_Load;
             menuEditor.ResumeLayout(false);
             menuEditor.PerformLayout();
@@ -141,5 +183,12 @@
         private RichTextBox rtbEditor;
         private SaveFileDialog saveFileDialogEditor;
         private OpenFileDialog openFileDialogEditor;
+        private ToolStripMenuItem editarToolStripMenuItem;
+        private ToolStripMenuItem fuenteToolStripMenuItem;
+        private ToolStripMenuItem colorToolStripMenuItem;
+        private ToolStripMenuItem herramientasToolStripMenuItem;
+        private ToolStripMenuItem contarLetrasToolStripMenuItem;
+        private FontDialog fontDialogEditor;
+        private ColorDialog colorDialogEditor;
     }
 }

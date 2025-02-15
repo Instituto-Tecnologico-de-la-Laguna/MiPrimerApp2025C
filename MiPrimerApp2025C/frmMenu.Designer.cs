@@ -36,6 +36,8 @@
             oprecacionesCon2ValoresToolStripMenuItem = new ToolStripMenuItem();
             temporizadorToolStripMenuItem = new ToolStripMenuItem();
             editorDeTextoToolStripMenuItem = new ToolStripMenuItem();
+            dataGridToolStripMenuItem = new ToolStripMenuItem();
+            temporizador2ToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -65,7 +67,7 @@
             // 
             // aplicacionesToolStripMenuItem
             // 
-            aplicacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { aplicacionSimpleToolStripMenuItem, oprecacionesCon2ValoresToolStripMenuItem, temporizadorToolStripMenuItem, editorDeTextoToolStripMenuItem });
+            aplicacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { aplicacionSimpleToolStripMenuItem, oprecacionesCon2ValoresToolStripMenuItem, temporizadorToolStripMenuItem, editorDeTextoToolStripMenuItem, dataGridToolStripMenuItem, temporizador2ToolStripMenuItem });
             aplicacionesToolStripMenuItem.Name = "aplicacionesToolStripMenuItem";
             aplicacionesToolStripMenuItem.Size = new Size(107, 24);
             aplicacionesToolStripMenuItem.Text = "Aplicaciones";
@@ -98,6 +100,20 @@
             editorDeTextoToolStripMenuItem.Text = "Editor de Texto";
             editorDeTextoToolStripMenuItem.Click += editorDeTextoToolStripMenuItem_Click;
             // 
+            // dataGridToolStripMenuItem
+            // 
+            dataGridToolStripMenuItem.Name = "dataGridToolStripMenuItem";
+            dataGridToolStripMenuItem.Size = new Size(267, 26);
+            dataGridToolStripMenuItem.Text = "Data Grid";
+            dataGridToolStripMenuItem.Click += dataGridToolStripMenuItem_Click;
+            // 
+            // temporizador2ToolStripMenuItem
+            // 
+            temporizador2ToolStripMenuItem.Name = "temporizador2ToolStripMenuItem";
+            temporizador2ToolStripMenuItem.Size = new Size(267, 26);
+            temporizador2ToolStripMenuItem.Text = "Temporizador 2";
+            temporizador2ToolStripMenuItem.Click += temporizador2ToolStripMenuItem_Click;
+            // 
             // frmMenu
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
@@ -123,5 +139,7 @@
         private ToolStripMenuItem oprecacionesCon2ValoresToolStripMenuItem;
         private ToolStripMenuItem temporizadorToolStripMenuItem;
         private ToolStripMenuItem editorDeTextoToolStripMenuItem;
+        private ToolStripMenuItem dataGridToolStripMenuItem;
+        private ToolStripMenuItem temporizador2ToolStripMenuItem;
     }
 }

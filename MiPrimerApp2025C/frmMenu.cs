@@ -45,5 +45,17 @@ namespace MiPrimerApp2025C
             frmEditor ediTexto = new frmEditor();
             ediTexto.Show();
         }
+
+        private void dataGridToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmDataGrid dataGrid = new frmDataGrid();
+            dataGrid.Show();
+        }
+
+        private void temporizador2ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmTemporizador2 temporizador2 = new frmTemporizador2();
+            temporizador2.Show();
+        }
     }
 }

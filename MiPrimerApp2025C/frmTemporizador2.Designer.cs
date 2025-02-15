@@ -1,0 +1,84 @@
+﻿namespace MiPrimerApp2025C
+{
+    partial class frmTemporizador2
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            components = new System.ComponentModel.Container();
+            lblContador = new Label();
+            tkbTemporizador = new TrackBar();
+            tmrContador = new System.Windows.Forms.Timer(components);
+            ((System.ComponentModel.ISupportInitialize)tkbTemporizador).BeginInit();
+            SuspendLayout();
+            // 
+            // lblContador
+            // 
+            lblContador.AutoSize = true;
+            lblContador.Font = new Font("Arial Narrow", 28F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblContador.Location = new Point(142, 51);
+            lblContador.Margin = new Padding(2, 0, 2, 0);
+            lblContador.Name = "lblContador";
+            lblContador.Size = new Size(45, 55);
+            lblContador.TabIndex = 1;
+            lblContador.Text = "0";
+            // 
+            // tkbTemporizador
+            // 
+            tkbTemporizador.Location = new Point(11, 142);
+            tkbTemporizador.Margin = new Padding(2);
+            tkbTemporizador.Maximum = 5;
+            tkbTemporizador.Name = "tkbTemporizador";
+            tkbTemporizador.Size = new Size(314, 56);
+            tkbTemporizador.TabIndex = 2;
+            // 
+            // tmrContador
+            // 
+            tmrContador.Enabled = true;
+            tmrContador.Tick += tmrContador_Tick;
+            // 
+            // frmTemporizador2
+            // 
+            AutoScaleDimensions = new SizeF(8F, 20F);
+            AutoScaleMode = AutoScaleMode.Font;
+            ClientSize = new Size(338, 209);
+            Controls.Add(tkbTemporizador);
+            Controls.Add(lblContador);
+            Name = "frmTemporizador2";
+            Text = "Temporizador2";
+            Load += frmTemporizador2_Load;
+            ((System.ComponentModel.ISupportInitialize)tkbTemporizador).EndInit();
+            ResumeLayout(false);
+            PerformLayout();
+        }
+
+        #endregion
+
+        private Label lblContador;
+        private TrackBar tkbTemporizador;
+        private System.Windows.Forms.Timer tmrContador;
+    }
+}

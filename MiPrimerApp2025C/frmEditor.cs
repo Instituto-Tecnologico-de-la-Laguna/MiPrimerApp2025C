@@ -132,5 +132,29 @@ namespace MiPrimerApp2025C
                 this.Close();
             }
         }
+
+        private void fuenteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult resultado = fontDialogEditor.ShowDialog();
+            if (resultado == DialogResult.OK)
+            {
+                rtbEditor.Font = fontDialogEditor.Font;
+            }
+        }
+
+        private void colorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult resultado = colorDialogEditor.ShowDialog();
+            if (resultado == DialogResult.OK)
+            {
+                rtbEditor.ForeColor = colorDialogEditor.Color;
+            }
+        }
+
+        private void contarLetrasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int letras = rtbEditor.Text.Length;
+            MessageBox.Show("El texto tiene " + letras + " letras");
+        }
     }
 }
