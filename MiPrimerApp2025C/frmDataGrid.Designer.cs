@@ -28,32 +28,34 @@
         /// </summary>
         private void InitializeComponent()
         {
-            dataGridView1 = new DataGridView();
+            dgvDatos = new DataGridView();
             Column1 = new DataGridViewTextBoxColumn();
             Column2 = new DataGridViewTextBoxColumn();
             Column3 = new DataGridViewComboBoxColumn();
             Column4 = new DataGridViewCheckBoxColumn();
-            Column5 = new DataGridViewButtonColumn();
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            Column5 = new DataGridViewTextBoxColumn();
+            btnGuardar = new Button();
+            saveFileDialogDataGrid = new SaveFileDialog();
+            ((System.ComponentModel.ISupportInitialize)dgvDatos).BeginInit();
             SuspendLayout();
             // 
-            // dataGridView1
+            // dgvDatos
             // 
-            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5 });
-            dataGridView1.Location = new Point(9, 23);
-            dataGridView1.Margin = new Padding(2);
-            dataGridView1.Name = "dataGridView1";
-            dataGridView1.RowHeadersWidth = 62;
-            dataGridView1.Size = new Size(635, 322);
-            dataGridView1.TabIndex = 1;
+            dgvDatos.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dgvDatos.Columns.AddRange(new DataGridViewColumn[] { Column1, Column2, Column3, Column4, Column5 });
+            dgvDatos.Location = new Point(8, 8);
+            dgvDatos.Margin = new Padding(2);
+            dgvDatos.Name = "dgvDatos";
+            dgvDatos.RowHeadersWidth = 62;
+            dgvDatos.Size = new Size(983, 338);
+            dgvDatos.TabIndex = 1;
             // 
             // Column1
             // 
             Column1.HeaderText = "Nombre";
             Column1.MinimumWidth = 8;
             Column1.Name = "Column1";
-            Column1.Width = 150;
+            Column1.Width = 400;
             // 
             // Column2
             // 
@@ -79,32 +81,46 @@
             // 
             // Column5
             // 
-            Column5.HeaderText = "";
+            Column5.HeaderText = "CURP";
             Column5.MinimumWidth = 8;
             Column5.Name = "Column5";
-            Column5.Text = "Editar";
-            Column5.Width = 150;
+            Column5.Width = 200;
+            // 
+            // btnGuardar
+            // 
+            btnGuardar.Anchor = AnchorStyles.Left | AnchorStyles.Right;
+            btnGuardar.Location = new Point(11, 350);
+            btnGuardar.Margin = new Padding(2);
+            btnGuardar.Name = "btnGuardar";
+            btnGuardar.Size = new Size(983, 27);
+            btnGuardar.TabIndex = 2;
+            btnGuardar.Text = "Guardar";
+            btnGuardar.UseVisualStyleBackColor = true;
+            btnGuardar.Click += btnGuardar_Click;
             // 
             // frmDataGrid
             // 
             AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(652, 368);
-            Controls.Add(dataGridView1);
+            ClientSize = new Size(991, 380);
+            Controls.Add(btnGuardar);
+            Controls.Add(dgvDatos);
             Name = "frmDataGrid";
             Text = "DataGridView";
             Load += frmDataGrid_Load;
-            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)dgvDatos).EndInit();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private DataGridView dataGridView1;
+        private DataGridView dgvDatos;
         private DataGridViewTextBoxColumn Column1;
         private DataGridViewTextBoxColumn Column2;
         private DataGridViewComboBoxColumn Column3;
         private DataGridViewCheckBoxColumn Column4;
-        private DataGridViewButtonColumn Column5;
+        private DataGridViewTextBoxColumn Column5;
+        private Button btnGuardar;
+        private SaveFileDialog saveFileDialogDataGrid;
     }
 }
