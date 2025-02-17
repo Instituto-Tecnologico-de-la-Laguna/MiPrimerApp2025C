@@ -13,7 +13,7 @@ namespace MiPrimerApp2025C
 {
     public partial class frmEditor : Form
     {
-       // DialogResult res =MessageBox.Show("deseas salir?","sistemas",MessageBoxButtons.YesNoCancel,MessageBoxIcon.Question);
+        // DialogResult res =MessageBox.Show("deseas salir?","sistemas",MessageBoxButtons.YesNoCancel,MessageBoxIcon.Question);
 
         bool archivoGuardado = false;
         string filePatch = null;
@@ -25,7 +25,7 @@ namespace MiPrimerApp2025C
         private void guardarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DialogResult resultado;
-            if (archivoGuardado==false)
+            if (archivoGuardado == false)
             {
 
                 resultado = saveFileDialogEditor.ShowDialog();
@@ -71,16 +71,16 @@ namespace MiPrimerApp2025C
             DialogResult resultado;
 
             resultado = openFileDialogEditor.ShowDialog();
-            
+
             if (resultado == DialogResult.OK)
             {
                 string filePatch = openFileDialogEditor.FileName;
                 try
                 {
-                    string texto =File.ReadAllText(filePatch);
+                    string texto = File.ReadAllText(filePatch);
                     rtbEditor.Text = texto;
                     archivoGuardado = true;
-                    
+
                 }
                 catch (Exception ex)
                 {
@@ -88,6 +88,10 @@ namespace MiPrimerApp2025C
                 }
             }
         }
-        
+
+        private void saveFileDialogEditor_FileOk(object sender, CancelEventArgs e)
+        {
+
+        }
     }
 }

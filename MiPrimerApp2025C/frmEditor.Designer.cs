@@ -103,6 +103,7 @@
             // saveFileDialogEditor
             // 
             saveFileDialogEditor.Filter = "Archivo de Texto|*.txt";
+            saveFileDialogEditor.FileOk += saveFileDialogEditor_FileOk;
             // 
             // openFileDialogEditor
             // 

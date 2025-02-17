@@ -42,5 +42,10 @@ namespace MiPrimerApp2025C
                 mkbAlarma.Enabled = true;
             }
         }
+
+        private void mkbAlarma_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+
+        }
     }
 }

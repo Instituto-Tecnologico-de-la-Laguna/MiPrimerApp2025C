@@ -62,6 +62,7 @@
             mkbAlarma.Size = new Size(191, 31);
             mkbAlarma.TabIndex = 1;
             mkbAlarma.ValidatingType = typeof(DateTime);
+            mkbAlarma.MaskInputRejected += mkbAlarma_MaskInputRejected;
             // 
             // chkHabilitar
             // 
