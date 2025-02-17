@@ -16,5 +16,31 @@ namespace MiPrimerApp2025C
         {
             InitializeComponent();
         }
+
+        private void BtnGuardar_Click(object sender, EventArgs e)
+        {
+            DialogResult result = SfdDataGrid.ShowDialog();
+            if (result == DialogResult.OK)
+            {
+                string filename = SfdDataGrid.FileName;
+                int total = DgvDatos.Rows.Count - 1;
+                string[] lineas = new string[total];
+
+                for (int i = 0; i < total; i++)
+                {
+                    string linea = "";
+                    // No me guarda los archivos, los borra
+                    for (int j = 0; j < DgvDatos.Columns.Count; j++)
+                    {
+                        if (j == DgvDatos.Columns.Count - 1)
+                            linea += DgvDatos.Rows[i].Cells[j].Value.ToString() + "";
+                        else
+                            linea += DgvDatos.Rows[i].Cells[j].Value.ToString() + "";
+                    }
+
+                    lineas[i] = linea;
+                }
+            }
+        }
     }
 }
