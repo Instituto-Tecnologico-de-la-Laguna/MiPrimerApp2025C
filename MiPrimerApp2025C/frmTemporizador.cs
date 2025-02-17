@@ -23,9 +23,9 @@ namespace MiPrimerApp2025C
             lblReloj.Text = DateTime.Now.ToString("hh:mm:ss");
             if (chkHabilitar.Checked == true)
             {
-               if(mktAlarma.Text == lblReloj.Text)
+                if (mktAlarma.Text == lblReloj.Text)
                 {
-                    axWindowsMediaPlayer1.URL = 
+                    axWindowsMediaPlayer1.URL =
                         @"C:\Users\Jose Luis\Downloads\ringtones-militar-trompeta.mp3";
                 }
             }
@@ -45,6 +45,16 @@ namespace MiPrimerApp2025C
         }
 
         private void lblReloj_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void frmTemporizador_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void mktAlarma_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
         {
 
         }

@@ -35,6 +35,7 @@
             aplicacionSimpleToolStripMenuItem = new ToolStripMenuItem();
             operacionesCon2ValoresToolStripMenuItem = new ToolStripMenuItem();
             temporizadorToolStripMenuItem = new ToolStripMenuItem();
+            editorDeTextoToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -44,7 +45,8 @@
             menuStrip1.Items.AddRange(new ToolStripItem[] { archivoToolStripMenuItem, aplicacionesToolStripMenuItem });
             menuStrip1.Location = new Point(0, 0);
             menuStrip1.Name = "menuStrip1";
-            menuStrip1.Size = new Size(800, 33);
+            menuStrip1.Padding = new Padding(4, 1, 0, 1);
+            menuStrip1.Size = new Size(560, 24);
             menuStrip1.TabIndex = 0;
             menuStrip1.Text = "menuStrip1";
             // 
@@ -52,51 +54,58 @@
             // 
             archivoToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { salirToolStripMenuItem });
             archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
-            archivoToolStripMenuItem.Size = new Size(88, 29);
+            archivoToolStripMenuItem.Size = new Size(60, 22);
             archivoToolStripMenuItem.Text = "Archivo";
             // 
             // salirToolStripMenuItem
             // 
             salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            salirToolStripMenuItem.Size = new Size(147, 34);
+            salirToolStripMenuItem.Size = new Size(96, 22);
             salirToolStripMenuItem.Text = "Salir";
             salirToolStripMenuItem.Click += salirToolStripMenuItem_Click;
             // 
             // aplicacionesToolStripMenuItem
             // 
-            aplicacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { aplicacionSimpleToolStripMenuItem, operacionesCon2ValoresToolStripMenuItem, temporizadorToolStripMenuItem });
+            aplicacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { aplicacionSimpleToolStripMenuItem, operacionesCon2ValoresToolStripMenuItem, temporizadorToolStripMenuItem, editorDeTextoToolStripMenuItem });
             aplicacionesToolStripMenuItem.Name = "aplicacionesToolStripMenuItem";
-            aplicacionesToolStripMenuItem.Size = new Size(126, 29);
+            aplicacionesToolStripMenuItem.Size = new Size(86, 22);
             aplicacionesToolStripMenuItem.Text = "Aplicaciones";
             // 
             // aplicacionSimpleToolStripMenuItem
             // 
             aplicacionSimpleToolStripMenuItem.Name = "aplicacionSimpleToolStripMenuItem";
-            aplicacionSimpleToolStripMenuItem.Size = new Size(324, 34);
+            aplicacionSimpleToolStripMenuItem.Size = new Size(212, 22);
             aplicacionSimpleToolStripMenuItem.Text = "Aplicacion Simple";
             aplicacionSimpleToolStripMenuItem.Click += aplicacionSimpleToolStripMenuItem_Click;
             // 
             // operacionesCon2ValoresToolStripMenuItem
             // 
             operacionesCon2ValoresToolStripMenuItem.Name = "operacionesCon2ValoresToolStripMenuItem";
-            operacionesCon2ValoresToolStripMenuItem.Size = new Size(324, 34);
+            operacionesCon2ValoresToolStripMenuItem.Size = new Size(212, 22);
             operacionesCon2ValoresToolStripMenuItem.Text = "Operaciones con 2 Valores";
             operacionesCon2ValoresToolStripMenuItem.Click += operacionesCon2ValoresToolStripMenuItem_Click;
             // 
             // temporizadorToolStripMenuItem
             // 
             temporizadorToolStripMenuItem.Name = "temporizadorToolStripMenuItem";
-            temporizadorToolStripMenuItem.Size = new Size(324, 34);
+            temporizadorToolStripMenuItem.Size = new Size(212, 22);
             temporizadorToolStripMenuItem.Text = "Temporizador";
             temporizadorToolStripMenuItem.Click += temporizadorToolStripMenuItem_Click;
             // 
+            // editorDeTextoToolStripMenuItem
+            // 
+            editorDeTextoToolStripMenuItem.Name = "editorDeTextoToolStripMenuItem";
+            editorDeTextoToolStripMenuItem.Size = new Size(212, 22);
+            editorDeTextoToolStripMenuItem.Text = "Editor de texto";
+            // 
             // frmMenu
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(800, 450);
+            ClientSize = new Size(560, 270);
             Controls.Add(menuStrip1);
             MainMenuStrip = menuStrip1;
+            Margin = new Padding(2, 2, 2, 2);
             Name = "frmMenu";
             Text = "Menu de Aplicaciones en Clase";
             menuStrip1.ResumeLayout(false);
@@ -114,5 +123,6 @@
         private ToolStripMenuItem aplicacionSimpleToolStripMenuItem;
         private ToolStripMenuItem operacionesCon2ValoresToolStripMenuItem;
         private ToolStripMenuItem temporizadorToolStripMenuItem;
+        private ToolStripMenuItem editorDeTextoToolStripMenuItem;
     }
 }

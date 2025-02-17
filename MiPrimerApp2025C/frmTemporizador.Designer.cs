@@ -48,28 +48,32 @@
             // 
             lblReloj.AutoSize = true;
             lblReloj.Font = new Font("Arial", 48F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            lblReloj.Location = new Point(137, 35);
+            lblReloj.Location = new Point(96, 21);
+            lblReloj.Margin = new Padding(2, 0, 2, 0);
             lblReloj.Name = "lblReloj";
-            lblReloj.Size = new Size(427, 111);
+            lblReloj.Size = new Size(290, 75);
             lblReloj.TabIndex = 0;
             lblReloj.Text = "00:00:00";
             lblReloj.Click += lblReloj_Click;
             // 
             // mktAlarma
             // 
-            mktAlarma.Location = new Point(25, 220);
+            mktAlarma.Location = new Point(18, 132);
+            mktAlarma.Margin = new Padding(2);
             mktAlarma.Mask = "00:00:00";
             mktAlarma.Name = "mktAlarma";
-            mktAlarma.Size = new Size(150, 31);
+            mktAlarma.Size = new Size(106, 23);
             mktAlarma.TabIndex = 1;
             mktAlarma.ValidatingType = typeof(DateTime);
+            mktAlarma.MaskInputRejected += mktAlarma_MaskInputRejected;
             // 
             // chkHabilitar
             // 
             chkHabilitar.AutoSize = true;
-            chkHabilitar.Location = new Point(195, 222);
+            chkHabilitar.Location = new Point(136, 133);
+            chkHabilitar.Margin = new Padding(2);
             chkHabilitar.Name = "chkHabilitar";
-            chkHabilitar.Size = new Size(104, 29);
+            chkHabilitar.Size = new Size(71, 19);
             chkHabilitar.TabIndex = 2;
             chkHabilitar.Text = "Habilitar";
             chkHabilitar.UseVisualStyleBackColor = true;
@@ -79,6 +83,7 @@
             // 
             axWindowsMediaPlayer1.Enabled = true;
             axWindowsMediaPlayer1.Location = new Point(398, 207);
+            axWindowsMediaPlayer1.Margin = new Padding(2);
             axWindowsMediaPlayer1.Name = "axWindowsMediaPlayer1";
             axWindowsMediaPlayer1.OcxState = (AxHost.State)resources.GetObject("axWindowsMediaPlayer1.OcxState");
             axWindowsMediaPlayer1.Size = new Size(317, 62);
@@ -86,15 +91,17 @@
             // 
             // frmTemporizador
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(727, 272);
+            ClientSize = new Size(509, 163);
             Controls.Add(axWindowsMediaPlayer1);
             Controls.Add(chkHabilitar);
             Controls.Add(mktAlarma);
             Controls.Add(lblReloj);
+            Margin = new Padding(2);
             Name = "frmTemporizador";
             Text = "Reloj";
+            Load += frmTemporizador_Load;
             ((System.ComponentModel.ISupportInitialize)axWindowsMediaPlayer1).EndInit();
             ResumeLayout(false);
             PerformLayout();
