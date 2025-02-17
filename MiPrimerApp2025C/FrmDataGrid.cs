@@ -30,15 +30,27 @@ namespace MiPrimerApp2025C
                 {
                     string linea = "";
                     // No me guarda los archivos, los borra
+                    // Porque nunca los escribiste...
                     for (int j = 0; j < DgvDatos.Columns.Count; j++)
                     {
                         if (j == DgvDatos.Columns.Count - 1)
                             linea += DgvDatos.Rows[i].Cells[j].Value.ToString() + "";
-                        else
-                            linea += DgvDatos.Rows[i].Cells[j].Value.ToString() + "";
+                        else 
+                            linea += DgvDatos.Rows[i].Cells[j].Value.ToString() + ",";
                     }
 
                     lineas[i] = linea;
+
+                    try
+                    {
+                        File.WriteAllLines(filename, lineas);
+                        MessageBox.Show("Archivo guardado correctamente");
+                        //archivoGuardado = true;
+                    }
+                    catch (Exception ex)
+                    {
+                        MessageBox.Show("Error al guardar el archivo " + ex.Message);
+                    }
                 }
             }
         }
