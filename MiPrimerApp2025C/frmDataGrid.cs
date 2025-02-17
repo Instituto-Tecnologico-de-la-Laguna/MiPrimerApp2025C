@@ -34,19 +34,21 @@ namespace MiPrimerApp2025C
             {
                 string fileName =saveFileDialogDataGrid.FileName;
                 int total = dgvDat.Rows.Count-1;
-                string[] lineas = new string[total];
 
+                string linea = " ";
                 for (int i = 0; i < total; i++)
                 {
-                    string linea = "";
+                   
                     for (int j = 0; j < dgvDat.Rows.Count; j++)
                     {
                         if(j == dgvDat.Rows.Count-1)
-                            linea += dgvDat.Rows[i].Cells[j].Value.ToString() + "";
+                            linea += dgvDat.Rows[i].Cells[j].Value.ToString() + "\n";
                         else
                             linea += dgvDat.Rows[i].Cells[j].Value.ToString()+",";
                     }
-                    lineas[i] = linea;
+                    
+                    File.WriteAllText(fileName, linea);
+                    MessageBox.Show("LOS DATOS FUERON GUARDADOS CON EXITO");
                 }
             }
         }
