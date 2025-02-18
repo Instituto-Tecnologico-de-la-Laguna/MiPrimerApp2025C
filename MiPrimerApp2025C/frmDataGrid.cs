@@ -24,7 +24,7 @@ namespace MiPrimerApp2025C
             {
                 string filename = saveFileDialogDataGrid.FileName;
                 int total = dgvDatos.Rows.Count - 1;
-                string[] lineas = new string[total];
+                //string[] lineas = new string[total];
                 for (int i = 0; i < total; i++)
                 {
                     string linea = "";
@@ -32,14 +32,14 @@ namespace MiPrimerApp2025C
                     {
                         if(j == dgvDatos.Rows[i].Cells.Count - 1)
                         {
-                            linea += dgvDatos.Rows[i].Cells[j].Value.ToString() + "";
+                            linea += dgvDatos.Rows[i].Cells[j].Value.ToString() + "\n";
                         }
                         else
                         {
                             linea += dgvDatos.Rows[i].Cells[j].Value.ToString() + ", ";
                         }
                     }
-                    lineas[i] = linea;
+                    //lineas[i] = linea;
                 }
             }
         }
