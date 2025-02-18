@@ -19,38 +19,34 @@ namespace MiPrimerApp2025C
 
         private void BtnGuardar_Click(object sender, EventArgs e)
         {
+            // Si no esta marcada la casilla de mayor de edad no guarda el archivo.
             DialogResult result = SfdDataGrid.ShowDialog();
             if (result == DialogResult.OK)
             {
                 string filename = SfdDataGrid.FileName;
                 int total = DgvDatos.Rows.Count - 1;
-                string[] lineas = new string[total];
-
+                string linea = "";
                 for (int i = 0; i < total; i++)
                 {
-                    string linea = "";
-                    // No me guarda los archivos, los borra
-                    // Porque nunca los escribiste...
+
                     for (int j = 0; j < DgvDatos.Columns.Count; j++)
                     {
                         if (j == DgvDatos.Columns.Count - 1)
-                            linea += DgvDatos.Rows[i].Cells[j].Value.ToString() + "";
-                        else 
-                            linea += DgvDatos.Rows[i].Cells[j].Value.ToString() + ",";
+                            linea += DgvDatos.Rows[i].Cells[j].Value.ToString() + "\n";
+                        else
+                            linea += DgvDatos.Rows[i].Cells[j].Value.ToString() + ","; 
                     }
 
-                    lineas[i] = linea;
+                }
 
-                    try
-                    {
-                        File.WriteAllLines(filename, lineas);
-                        MessageBox.Show("Archivo guardado correctamente");
-                        //archivoGuardado = true;
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Error al guardar el archivo " + ex.Message);
-                    }
+                try
+                {
+                    File.WriteAllText(filename, linea);
+                    MessageBox.Show("Archivo guardado correctamente");
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al guardar el archivo: " + ex.Message);
                 }
             }
         }
