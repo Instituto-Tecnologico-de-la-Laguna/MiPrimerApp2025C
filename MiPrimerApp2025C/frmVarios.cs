@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Metrics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -16,8 +17,8 @@ namespace MiPrimerApp2025C
         public string estados(string text)
         {
 
-          
-            string[] estados = { "Aguascalientes", "Baja California", "Baja California Sur", "Campeche", "Coahuila", "Colima", "Chiapas", "Chihuahua", "Ciudad de México", "Durango", "Guanajuato", "Guerrero", "Hidalgo", "Jalisco", "México", "Michoacán", "Morelos", "Nayarit", "Nuevo León", "Oaxaca", "Puebla", "Querétaro", "Quintana Roo", "San Luis Potosí", "Sinaloa", "Sonora", "Tabasco", "Tamaulipas", "Tlaxcala", "Veracruz", "Yucatán", "Zacatecas" }; 
+
+            string[] estados = { "Aguascalientes", "Baja California", "Baja California Sur", "Campeche", "Coahuila", "Colima", "Chiapas", "Chihuahua", "Ciudad de México", "Durango", "Guanajuato", "Guerrero", "Hidalgo", "Jalisco", "México", "Michoacán", "Morelos", "Nayarit", "Nuevo León", "Oaxaca", "Puebla", "Querétaro", "Quintana Roo", "San Luis Potosí", "Sinaloa", "Sonora", "Tabasco", "Tamaulipas", "Tlaxcala", "Veracruz", "Yucatán", "Zacatecas" };
             string[] abEstados = { "AG", "BC", "BS", "CC", "CL", "CM", "CS", "CH", "DF", "DG", "GT", "GR", "HG", "JC", "MC", "MN", "MS", "NT", "NL", "OC", "PL", "QT", "QR", "SP", "SL", "SR", "TC", "TS", "TL", "VZ", "YN", "ZS" };
 
             int cont = 0;
@@ -33,7 +34,7 @@ namespace MiPrimerApp2025C
             return estado;
 
         }
-        public string genero (string text)
+        public string genero(string text)
         {
             if (text == "M")
             {
@@ -42,7 +43,7 @@ namespace MiPrimerApp2025C
             return "HOMBRE";
         }
 
-        public string fechas (string text)
+        public string fechas(string text)
         {
             string dia = text.Substring(4, 2);
             string mes = text.Substring(2, 2);
@@ -51,8 +52,8 @@ namespace MiPrimerApp2025C
 
             if (Convert.ToInt16(año) >= 0 || Convert.ToInt16(año) <= 25)
             {
-                
-                string FechaNac = dia +"de "+meses[Convert.ToInt16(mes) - 1] + " del año 20"+año;
+
+                string FechaNac = dia + "de " + meses[Convert.ToInt16(mes) - 1] + " del año 20" + año;
                 return FechaNac;
             }
             else
@@ -60,7 +61,7 @@ namespace MiPrimerApp2025C
                 string FechaNac = dia + " de " + meses[Convert.ToInt16(mes) - 1] + "del año 19" + año;
                 return FechaNac;
             }
-            
+
         }
         public frmVarios()
 
@@ -78,37 +79,36 @@ namespace MiPrimerApp2025C
             int edad;
             int meses;
             int dias;
-            
-            if(nacimiento.Month>calculo.Month)
-            {
-                 edad = (calculo.Year - nacimiento.Year)-1;
-                 meses = nacimiento.Month - calculo.Month;
-                if(nacimiento.Day>calculo.Day)
-                {
-                    meses = meses - 1;
-                     dias = nacimiento.Day - calculo.Day;
-                }
-                else
-                {
-                     dias =calculo.Day - nacimiento.Day;
-                }
-            }
-            else
-            {
-                 edad = (calculo.Year - nacimiento.Year) ;
-                 meses = calculo.Month-nacimiento.Month ;
-                if (nacimiento.Day > calculo.Day)
 
+            if (nacimiento.Month > calculo.Month)
+            {
+                edad = (calculo.Year - nacimiento.Year) - 1;
+                meses = 12 - (nacimiento.Month - calculo.Month);
+                if (nacimiento.Day > calculo.Day)
                 {
-                    meses = meses - 1;
                     dias = nacimiento.Day - calculo.Day;
                 }
                 else
                 {
-                     dias = calculo.Day - nacimiento.Day;
+                    dias = calculo.Day - nacimiento.Day;
                 }
             }
-            
+            else
+            {
+                edad = (calculo.Year - nacimiento.Year);
+                meses = calculo.Month - nacimiento.Month;
+                if (nacimiento.Day > calculo.Day)
+
+                {
+                   // meses = meses - 1;
+                    dias = nacimiento.Day - calculo.Day;
+                }
+                else
+                {
+                    dias = calculo.Day - nacimiento.Day;
+                }
+            }
+
 
             //mostramos los datos en un mbox
             MessageBox.Show("Años: " + edad + " Meses: " + meses + " Dias: " + dias, "Resultado",
