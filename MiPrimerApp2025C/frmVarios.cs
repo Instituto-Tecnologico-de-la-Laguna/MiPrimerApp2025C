@@ -84,25 +84,31 @@ namespace MiPrimerApp2025C
             {
                 edad = (calculo.Year - nacimiento.Year) - 1;
                 meses = 12 - (nacimiento.Month - calculo.Month);
-                if (nacimiento.Day > calculo.Day)
+
+                if (nacimiento.Day > calculo.Day )
                 {
-                    dias = nacimiento.Day - calculo.Day;
-                }
+                    meses--;
+                    dias = DateTime.DaysInMonth(calculo.Year,calculo.Month)-(nacimiento.Day-calculo.Day);
+                        
+                } 
+                
                 else
                 {
                     dias = calculo.Day - nacimiento.Day;
-                }
+                } 
             }
             else
             {
                 edad = (calculo.Year - nacimiento.Year);
                 meses = calculo.Month - nacimiento.Month;
-                if (nacimiento.Day > calculo.Day)
 
+                if (nacimiento.Day > calculo.Day)
                 {
-                   // meses = meses - 1;
-                    dias = nacimiento.Day - calculo.Day;
+                    meses--;
+                    dias = DateTime.DaysInMonth(calculo.Year, calculo.Month) - (nacimiento.Day - calculo.Day);
+
                 }
+
                 else
                 {
                     dias = calculo.Day - nacimiento.Day;
