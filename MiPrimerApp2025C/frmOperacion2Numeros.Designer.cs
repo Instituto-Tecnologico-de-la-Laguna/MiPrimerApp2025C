@@ -35,8 +35,8 @@
             btnCalcular = new Button();
             groupBox1 = new GroupBox();
             rdbDivision = new RadioButton();
-            rdbMultiplicacion = new RadioButton();
             rdbResta = new RadioButton();
+            rdbMultiplicacion = new RadioButton();
             rdbSuma = new RadioButton();
             btnBorrar = new Button();
             groupBox1.SuspendLayout();
@@ -45,40 +45,45 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(17, 20);
+            label1.Location = new Point(14, 16);
+            label1.Margin = new Padding(2, 0, 2, 0);
             label1.Name = "label1";
-            label1.Size = new Size(71, 25);
+            label1.Size = new Size(58, 20);
             label1.TabIndex = 0;
             label1.Text = "Valor 1:";
             // 
             // txtValor1
             // 
-            txtValor1.Location = new Point(17, 48);
+            txtValor1.Location = new Point(14, 38);
+            txtValor1.Margin = new Padding(2);
             txtValor1.Name = "txtValor1";
-            txtValor1.Size = new Size(273, 31);
+            txtValor1.Size = new Size(219, 27);
             txtValor1.TabIndex = 1;
             // 
             // txtValor2
             // 
-            txtValor2.Location = new Point(17, 127);
+            txtValor2.Location = new Point(14, 102);
+            txtValor2.Margin = new Padding(2);
             txtValor2.Name = "txtValor2";
-            txtValor2.Size = new Size(273, 31);
+            txtValor2.Size = new Size(219, 27);
             txtValor2.TabIndex = 3;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new Point(17, 99);
+            label2.Location = new Point(14, 79);
+            label2.Margin = new Padding(2, 0, 2, 0);
             label2.Name = "label2";
-            label2.Size = new Size(71, 25);
+            label2.Size = new Size(58, 20);
             label2.TabIndex = 2;
             label2.Text = "Valor 2:";
             // 
             // btnCalcular
             // 
-            btnCalcular.Location = new Point(366, 46);
+            btnCalcular.Location = new Point(274, 38);
+            btnCalcular.Margin = new Padding(2);
             btnCalcular.Name = "btnCalcular";
-            btnCalcular.Size = new Size(112, 34);
+            btnCalcular.Size = new Size(90, 27);
             btnCalcular.TabIndex = 4;
             btnCalcular.Text = "Calcular";
             btnCalcular.UseVisualStyleBackColor = true;
@@ -87,65 +92,65 @@
             // groupBox1
             // 
             groupBox1.Controls.Add(rdbDivision);
-            groupBox1.Controls.Add(rdbMultiplicacion);
             groupBox1.Controls.Add(rdbResta);
+            groupBox1.Controls.Add(rdbMultiplicacion);
             groupBox1.Controls.Add(rdbSuma);
-            groupBox1.Location = new Point(12, 190);
+            groupBox1.Location = new Point(14, 156);
             groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(442, 132);
+            groupBox1.Size = new Size(360, 125);
             groupBox1.TabIndex = 5;
             groupBox1.TabStop = false;
-            groupBox1.Text = "Operación";
+            groupBox1.Text = "operacion";
             // 
             // rdbDivision
             // 
             rdbDivision.AutoSize = true;
-            rdbDivision.Location = new Point(241, 78);
+            rdbDivision.Location = new Point(192, 73);
             rdbDivision.Name = "rdbDivision";
-            rdbDivision.Size = new Size(100, 29);
+            rdbDivision.Size = new Size(81, 24);
             rdbDivision.TabIndex = 3;
             rdbDivision.TabStop = true;
-            rdbDivision.Text = "Division";
+            rdbDivision.Text = "division";
             rdbDivision.UseVisualStyleBackColor = true;
-            // 
-            // rdbMultiplicacion
-            // 
-            rdbMultiplicacion.AutoSize = true;
-            rdbMultiplicacion.Location = new Point(241, 30);
-            rdbMultiplicacion.Name = "rdbMultiplicacion";
-            rdbMultiplicacion.Size = new Size(146, 29);
-            rdbMultiplicacion.TabIndex = 2;
-            rdbMultiplicacion.TabStop = true;
-            rdbMultiplicacion.Text = "Multiplicacion";
-            rdbMultiplicacion.UseVisualStyleBackColor = true;
             // 
             // rdbResta
             // 
             rdbResta.AutoSize = true;
-            rdbResta.Location = new Point(46, 78);
+            rdbResta.Location = new Point(6, 73);
             rdbResta.Name = "rdbResta";
-            rdbResta.Size = new Size(79, 29);
-            rdbResta.TabIndex = 1;
+            rdbResta.Size = new Size(62, 24);
+            rdbResta.TabIndex = 2;
             rdbResta.TabStop = true;
-            rdbResta.Text = "Resta";
+            rdbResta.Text = "resta";
             rdbResta.UseVisualStyleBackColor = true;
+            // 
+            // rdbMultiplicacion
+            // 
+            rdbMultiplicacion.AutoSize = true;
+            rdbMultiplicacion.Location = new Point(192, 26);
+            rdbMultiplicacion.Name = "rdbMultiplicacion";
+            rdbMultiplicacion.Size = new Size(124, 24);
+            rdbMultiplicacion.TabIndex = 1;
+            rdbMultiplicacion.TabStop = true;
+            rdbMultiplicacion.Text = "multiplicacion";
+            rdbMultiplicacion.UseVisualStyleBackColor = true;
             // 
             // rdbSuma
             // 
             rdbSuma.AutoSize = true;
-            rdbSuma.Location = new Point(46, 30);
+            rdbSuma.Location = new Point(6, 26);
             rdbSuma.Name = "rdbSuma";
-            rdbSuma.Size = new Size(82, 29);
+            rdbSuma.Size = new Size(65, 24);
             rdbSuma.TabIndex = 0;
             rdbSuma.TabStop = true;
-            rdbSuma.Text = "Suma";
+            rdbSuma.Text = "suma";
             rdbSuma.UseVisualStyleBackColor = true;
             // 
             // btnBorrar
             // 
-            btnBorrar.Location = new Point(366, 124);
+            btnBorrar.Location = new Point(274, 102);
             btnBorrar.Name = "btnBorrar";
-            btnBorrar.Size = new Size(112, 34);
+            btnBorrar.Size = new Size(94, 29);
             btnBorrar.TabIndex = 6;
             btnBorrar.Text = "Borrar";
             btnBorrar.UseVisualStyleBackColor = true;
@@ -153,9 +158,9 @@
             // 
             // frmOperacion2Numeros
             // 
-            AutoScaleDimensions = new SizeF(10F, 25F);
+            AutoScaleDimensions = new SizeF(8F, 20F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(522, 340);
+            ClientSize = new Size(410, 440);
             Controls.Add(btnBorrar);
             Controls.Add(groupBox1);
             Controls.Add(btnCalcular);
@@ -163,6 +168,7 @@
             Controls.Add(label2);
             Controls.Add(txtValor1);
             Controls.Add(label1);
+            Margin = new Padding(2);
             Name = "frmOperacion2Numeros";
             Text = "Operaciones 2 Numeros";
             groupBox1.ResumeLayout(false);
@@ -180,8 +186,8 @@
         private Button btnCalcular;
         private GroupBox groupBox1;
         private RadioButton rdbDivision;
-        private RadioButton rdbMultiplicacion;
         private RadioButton rdbResta;
+        private RadioButton rdbMultiplicacion;
         private RadioButton rdbSuma;
         private Button btnBorrar;
     }

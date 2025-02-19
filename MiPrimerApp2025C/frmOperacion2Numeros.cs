@@ -20,33 +20,31 @@ namespace MiPrimerApp2025C
         private void btnCalcular_Click(object sender, EventArgs e)
         {
             Double valor1, valor2;
-
             try
             {
                 valor1 = Convert.ToDouble(txtValor1.Text);
                 valor2 = double.Parse(txtValor2.Text);
             }
-            catch (Exception)
+            catch 
             {
-                MessageBox.Show("Ingrese valores numericos");
+                MessageBox.Show("Ingresa valores numericos");
                 return;
             }
-
             if (rdbSuma.Checked == true)
                 MessageBox.Show("La suma de los valores es: " + (valor1 + valor2));
             else if (rdbResta.Checked == true)
                 MessageBox.Show("La resta de los valores es: " + (valor1 - valor2));
             else if (rdbMultiplicacion.Checked == true)
                 MessageBox.Show("La multiplicacion de los valores es: " + (valor1 * valor2));
-            else
+            else if (rdbDivision.Checked == true)
                 MessageBox.Show("La division de los valores es: " + (valor1 / valor2));
 
         }
 
         private void btnBorrar_Click(object sender, EventArgs e)
         {
-            txtValor1 .Clear();
-            txtValor2.Clear();
+            this.txtValor1.Clear();
+            this.txtValor2.Clear();
         }
     }
 }
