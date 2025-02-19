@@ -54,8 +54,14 @@ namespace MiPrimerApp2025C
 
         private void temporizadorToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            frmDataGrid grid = new frmDataGrid();   
+            frmDataGrid grid = new frmDataGrid();
             grid.Show();
+        }
+
+        private void fechasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            frmVarios varios = new frmVarios();
+            varios.Show();
         }
     }
 }

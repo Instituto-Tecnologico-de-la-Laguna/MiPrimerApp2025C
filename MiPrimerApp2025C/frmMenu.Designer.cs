@@ -38,6 +38,7 @@
             editorDeTextoToolStripMenuItem = new ToolStripMenuItem();
             temporizador2ToolStripMenuItem = new ToolStripMenuItem();
             temporizadorToolStripMenuItem1 = new ToolStripMenuItem();
+            fechasToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -67,7 +68,7 @@
             // 
             // aplicacionesToolStripMenuItem
             // 
-            aplicacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { aplicacionSimpleToolStripMenuItem, operaciones2NumerosToolStripMenuItem, temporizadorToolStripMenuItem, editorDeTextoToolStripMenuItem, temporizador2ToolStripMenuItem, temporizadorToolStripMenuItem1 });
+            aplicacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { aplicacionSimpleToolStripMenuItem, operaciones2NumerosToolStripMenuItem, temporizadorToolStripMenuItem, editorDeTextoToolStripMenuItem, temporizador2ToolStripMenuItem, temporizadorToolStripMenuItem1, fechasToolStripMenuItem });
             aplicacionesToolStripMenuItem.Name = "aplicacionesToolStripMenuItem";
             aplicacionesToolStripMenuItem.Size = new Size(126, 29);
             aplicacionesToolStripMenuItem.Text = "Aplicaciones";
@@ -114,6 +115,13 @@
             temporizadorToolStripMenuItem1.Text = "ShowGrid";
             temporizadorToolStripMenuItem1.Click += temporizadorToolStripMenuItem1_Click;
             // 
+            // fechasToolStripMenuItem
+            // 
+            fechasToolStripMenuItem.Name = "fechasToolStripMenuItem";
+            fechasToolStripMenuItem.Size = new Size(306, 34);
+            fechasToolStripMenuItem.Text = "Fechas";
+            fechasToolStripMenuItem.Click += fechasToolStripMenuItem_Click;
+            // 
             // frmMenu
             // 
             AutoScaleDimensions = new SizeF(10F, 25F);
@@ -141,5 +149,6 @@
         private ToolStripMenuItem editorDeTextoToolStripMenuItem;
         private ToolStripMenuItem temporizador2ToolStripMenuItem;
         private ToolStripMenuItem temporizadorToolStripMenuItem1;
+        private ToolStripMenuItem fechasToolStripMenuItem;
     }
 }
