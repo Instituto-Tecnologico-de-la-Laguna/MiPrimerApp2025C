@@ -49,20 +49,51 @@ namespace MiPrimerApp2025C
             string mes = text.Substring(2, 2);
             string año = text.Substring(0, 2);
             string[] meses = { "Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre" };
+            int edad=0;
+            
 
-            if (Convert.ToInt16(año) >= 0 || Convert.ToInt16(año) <= 25)
-            {
+           
+                if (Convert.ToInt16(año) <= 25)
+                {
+                    edad = Convert.ToInt16(DateTime.Now.Year) - Convert.ToInt16("20" + año);
+                    if (Convert.ToInt16(mes) > DateTime.Now.Month)
+                    {
+                        edad = (Convert.ToInt16(DateTime.Now.Year)) - 1 - Convert.ToInt16("20" + año);
 
-                string FechaNac = dia + "de " + meses[Convert.ToInt16(mes) - 1] + " del año 20" + año;
-                return FechaNac;
+                        if (Convert.ToInt16(dia) > DateTime.Now.Day)
+                        {
+                            edad = (Convert.ToInt16(DateTime.Now.Year)) - 1 - Convert.ToInt16("20" + año);
+                        }
+                    }
+
+                    else
+                    {
+                        edad = Convert.ToInt16(DateTime.Now.Year) - Convert.ToInt16("19" + año);
+                        if (Convert.ToInt16(mes) > DateTime.Now.Month)
+                        {
+                            edad = (Convert.ToInt16(DateTime.Now.Year)) - 1 - Convert.ToInt16("19" + año);
+
+                            if (Convert.ToInt16(dia) > DateTime.Now.Day)
+                            {
+                                edad = (Convert.ToInt16(DateTime.Now.Year)) - 1 - Convert.ToInt16("19" + año);
+                            }
+                        }
+                    }
+                }
+
+                    if (Convert.ToInt16(año) >= 0 || Convert.ToInt16(año) <= 25)
+                    {
+
+                        string FechaNac = dia + "de " + meses[Convert.ToInt16(mes) - 1] + " del año 20" + año + "Edad:" + edad;
+                        return FechaNac;
+                    }
+                    else
+                    {
+                        string FechaNac = dia + " de " + meses[Convert.ToInt16(mes) - 1] + "del año 19" + año + " Edad:" + edad;
+                        return FechaNac;
+                    }
             }
-            else
-            {
-                string FechaNac = dia + " de " + meses[Convert.ToInt16(mes) - 1] + "del año 19" + año;
-                return FechaNac;
-            }
-
-        }
+        
         public frmVarios()
 
 
@@ -85,7 +116,7 @@ namespace MiPrimerApp2025C
                 edad = (calculo.Year - nacimiento.Year) - 1;
                 meses = 12 - (nacimiento.Month - calculo.Month);
 
-                if (nacimiento.Day > calculo.Day )
+                if (nacimiento.Day >= calculo.Day )
                 {
                     meses--;
                     dias = DateTime.DaysInMonth(calculo.Year,calculo.Month)-(nacimiento.Day-calculo.Day);
