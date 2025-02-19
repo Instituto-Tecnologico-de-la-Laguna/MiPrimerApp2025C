@@ -20,7 +20,7 @@ namespace MiPrimerApp2025C
         {
             InitializeComponent();
         }
-        
+
         private void guardarToolStripMenuItem_Click(object sender, EventArgs e)
         {
             DialogResult resultado;
@@ -77,6 +77,39 @@ namespace MiPrimerApp2025C
                 }
             }
 
+        }
+
+        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult res = MessageBox.Show("Deseas salir?", "Sistema", MessageBoxButtons.OKCancel, MessageBoxIcon.Question);
+            if (res == DialogResult.OK)
+            {
+                this.Close();
+            }
+        }
+
+        private void fuenteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult resultado = fontDialogEditor.ShowDialog();
+            if (resultado == DialogResult.OK)
+            {
+                rtbEditor.Font = fontDialogEditor.Font;
+            }
+        }
+
+        private void colorToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DialogResult resultado = colorDialogEditor.ShowDialog();
+            if (resultado == DialogResult.OK)
+            {
+                rtbEditor.ForeColor = colorDialogEditor.Color;
+            }
+        }
+
+        private void contarLetrasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            int letras = rtbEditor.Text.Length;
+            MessageBox.Show("El texto tiene " + letras + " letras");
         }
     }
 }
