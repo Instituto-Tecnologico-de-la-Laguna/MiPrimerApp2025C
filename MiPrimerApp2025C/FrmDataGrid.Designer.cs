@@ -50,6 +50,7 @@
             DgvDatos.Name = "DgvDatos";
             DgvDatos.Size = new Size(740, 359);
             DgvDatos.TabIndex = 0;
+            DgvDatos.CellContentClick += DgvDatos_CellContentClick;
             // 
             // ColumnaTexto
             // 

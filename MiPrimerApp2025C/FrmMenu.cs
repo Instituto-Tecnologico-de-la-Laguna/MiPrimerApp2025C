@@ -46,5 +46,16 @@ namespace MiPrimerApp2025C
             FrmDataGrid DataGrid = new FrmDataGrid();
             DataGrid.Show();
         }
+
+        private void toolStripMenuItem2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void fechasToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FrmVarios fechas = new FrmVarios();
+            fechas.Show();
+        }
     }
 }

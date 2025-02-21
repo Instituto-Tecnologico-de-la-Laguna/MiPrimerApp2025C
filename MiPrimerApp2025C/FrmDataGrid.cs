@@ -34,7 +34,7 @@ namespace MiPrimerApp2025C
                         if (j == DgvDatos.Columns.Count - 1)
                             linea += DgvDatos.Rows[i].Cells[j].Value.ToString() + "\n";
                         else
-                            linea += DgvDatos.Rows[i].Cells[j].Value.ToString() + ","; 
+                            linea += DgvDatos.Rows[i].Cells[j].Value.ToString() + ",";
                     }
 
                 }
@@ -49,6 +49,11 @@ namespace MiPrimerApp2025C
                     MessageBox.Show("Error al guardar el archivo: " + ex.Message);
                 }
             }
+        }
+
+        private void DgvDatos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

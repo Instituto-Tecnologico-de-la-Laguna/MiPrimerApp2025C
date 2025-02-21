@@ -39,6 +39,7 @@ namespace MiPrimerApp2025C
             editorDeTextoToolStripMenuItem = new ToolStripMenuItem();
             temporizador2ToolStripMenuItem = new ToolStripMenuItem();
             dataGridToolStripMenuItem = new ToolStripMenuItem();
+            fechasToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             SuspendLayout();
             // 
@@ -67,7 +68,7 @@ namespace MiPrimerApp2025C
             // 
             // aplicacionesToolStripMenuItem
             // 
-            aplicacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { aplicaciónSimpleToolStripMenuItem, operacionesDe2ValoresToolStripMenuItem, temporizadorToolStripMenuItem, editorDeTextoToolStripMenuItem, temporizador2ToolStripMenuItem, dataGridToolStripMenuItem });
+            aplicacionesToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { aplicaciónSimpleToolStripMenuItem, operacionesDe2ValoresToolStripMenuItem, temporizadorToolStripMenuItem, editorDeTextoToolStripMenuItem, temporizador2ToolStripMenuItem, dataGridToolStripMenuItem, fechasToolStripMenuItem });
             aplicacionesToolStripMenuItem.Name = "aplicacionesToolStripMenuItem";
             aplicacionesToolStripMenuItem.Size = new Size(86, 20);
             aplicacionesToolStripMenuItem.Text = "Aplicaciones";
@@ -115,6 +116,13 @@ namespace MiPrimerApp2025C
             dataGridToolStripMenuItem.Text = "Data Grid";
             dataGridToolStripMenuItem.Click += dataGridToolStripMenuItem_Click;
             // 
+            // fechasToolStripMenuItem
+            // 
+            fechasToolStripMenuItem.Name = "fechasToolStripMenuItem";
+            fechasToolStripMenuItem.Size = new Size(205, 22);
+            fechasToolStripMenuItem.Text = "Fechas";
+            fechasToolStripMenuItem.Click += fechasToolStripMenuItem_Click;
+            // 
             // FrmMenu
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -159,5 +167,6 @@ namespace MiPrimerApp2025C
         private ToolStripMenuItem editorDeTextoToolStripMenuItem;
         private ToolStripMenuItem temporizador2ToolStripMenuItem;
         private ToolStripMenuItem dataGridToolStripMenuItem;
+        private ToolStripMenuItem fechasToolStripMenuItem;
     }
 }
