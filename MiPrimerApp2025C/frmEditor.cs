@@ -79,10 +79,10 @@ namespace MiPrimerApp2025C
 
         }
 
-        private void salirToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            DialogResult res = MessageBoxButtons.Show("Guardado");
-        }
+        //private void salirToolStripMenuItem_Click(object sender, EventArgs e)
+        //{
+          //  DialogResult res = MessageBoxButtons.Show("Guardado");
+        //}
 
         private void salirToolStripMenuItem_Click(object sender, EventArgs e)
         {
