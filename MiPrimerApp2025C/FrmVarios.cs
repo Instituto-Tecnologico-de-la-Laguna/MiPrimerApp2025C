@@ -37,7 +37,7 @@ namespace MiPrimerApp2025C
             if (calculo.Month > mesNacimiento)
             {
                 edad[0] = calculo.Year - añoNacimiento;
-                edad[1] = (calculo.Month + 12) - mesNacimiento;
+                edad[1] = calculo.Month - mesNacimiento;
             }
 
             MessageBox.Show("Años: " + edad[0] + "\nMeses: " + edad[1] + "\nDías:" + edad[2], "Resultado:",
